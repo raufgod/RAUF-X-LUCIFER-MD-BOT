@@ -5,11 +5,7 @@
 <!--              OFFICIAL PROJECT BANNER            -->
 <!-- ═══════════════════════════════════════════════ -->
 
-<img src="./rauf-lucifer-banner.png" width="100%" alt="RAUF X LUCIFER MD BOT"/>
-
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=27&duration=2500&pause=700&color=A855F7&center=true&vCenter=true&width=850&lines=RAUF+%C3%97+LUCIFER+MD+BOT;600%2B+POWERFUL+COMMANDS;NEXT+GENERATION+WHATSAPP+AUTOMATION;BUILT+AND+MAINTAINED+BY+RAUF" alt="Animated Project Title"/>
+<img src="./readme-banner.svg" width="100%" alt="RAUF × LUCIFER MD BOT"/>
 
 <br/>
 
@@ -17,7 +13,7 @@
 
 <p>
 <img src="https://img.shields.io/badge/PROJECT-RAUF%20×%20LUCIFER-8B5CF6?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/VERSION-25.3%20BETA-9333EA?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/VERSION-25.4%20BETA-9333EA?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/DEVELOPER-RAUF-111111?style=for-the-badge"/>
 </p>
 
@@ -29,9 +25,9 @@
 </p>
 
 <p>
-<img src="https://img.shields.io/github/stars/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=8B5CF6&label=STARS"/>
-<img src="https://img.shields.io/github/forks/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=A855F7&label=FORKS"/>
-<img src="https://img.shields.io/github/issues/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=9333EA&label=ISSUES"/>
+<img src="https://img.shields.io/github/stars/raufgod/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=8B5CF6&label=STARS"/>
+<img src="https://img.shields.io/github/forks/raufgod/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=A855F7&label=FORKS"/>
+<img src="https://img.shields.io/github/issues/raufgod/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=9333EA&label=ISSUES"/>
 </p>
 
 ### 👑 FOUNDER & MAIN DEVELOPER
@@ -44,9 +40,13 @@
 
 </div>
 
+<div align="center">
+<img src="./readme-features.svg" width="100%" alt="Highlights"/>
+</div>
+
 > Independent community project. Not affiliated with, endorsed by, or sponsored by WhatsApp, Meta or Telegram.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # ◈ TABLE OF CONTENTS
 
@@ -84,7 +84,7 @@
 
 </details>
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 💜 01. PROJECT OVERVIEW
 
@@ -112,7 +112,7 @@ The application is designed to run as a single Node.js process, serving its webs
 
 </div>
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # ⚡ 02. PROJECT HIGHLIGHTS
 
@@ -140,7 +140,7 @@ The available modules and configuration determine which services are active.
 
 </details>
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🚀 03. COMPLETE FEATURES
 
@@ -179,7 +179,7 @@ The available modules and configuration determine which services are active.
 - ZIP upgrade system.
 - Telegram-based management integrations.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 📱 04. WHATSAPP MULTI-DEVICE SYSTEM
 
@@ -204,30 +204,10 @@ https://github.com/WhiskeySockets/Baileys
 ### Architecture
 
 <div align="center">
-
-<img src="https://img.shields.io/badge/WHATSAPP-MULTI--DEVICE-25D366?style=for-the-badge&logo=whatsapp"/>
-
-<br/>
-
-<img src="https://img.shields.io/badge/BAILEYS-CONNECTION-128C7E?style=flat-square"/>
-
-<br/>
-
-⬇
-
-**MESSAGE PROCESSING**
-
-⬇
-
-**COMMAND HANDLER**
-
-⬇
-
-**600+ COMMAND ECOSYSTEM**
-
+<img src="./readme-architecture.svg" width="100%" alt="Message flow: WhatsApp, Baileys, handler, commands, reply"/>
 </div>
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🔗 05. PAIRING SYSTEM
 
@@ -248,7 +228,7 @@ No QR scanning is required for this phone-number linking flow.
 
 **Important:** Never share pairing codes or session credentials with unauthorized people.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🧩 06. COMMAND ECOSYSTEM
 
@@ -269,7 +249,7 @@ Send `.menu` from the linked WhatsApp account to explore the available command m
 
 The actual command list is determined by the installed command modules.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🤖 07. TELEGRAM COMPANION BOT
 
@@ -293,7 +273,7 @@ Telegram integrations use environment variables.
 
 Telegram services are optional and depend on configuration.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🌐 08. WEBSITE & CONTROL PANEL
 
@@ -325,7 +305,7 @@ The project includes:
 
 These features help search engines and link-preview systems understand the website.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 👑 09. ADMINISTRATION DASHBOARD
 
@@ -345,7 +325,7 @@ The admin panel uses a configurable secret URL.
 
 Only authorized administrators should have access.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🎨 10. WHITE-LABEL SYSTEM
 
@@ -362,7 +342,7 @@ Users can configure their own bot identity through the available website functio
 
 This allows supported users to create their own branded bot experience.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🎙️ 11. AI & VOICE AGENT
 
@@ -382,7 +362,7 @@ The voice agent has its own optional configuration and requirements.
 
 `GROQ_API_KEY` is used for the voice agent's speech-to-text integration.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🔌 12. API INTEGRATIONS
 
@@ -400,7 +380,7 @@ Public endpoints and their original attribution should remain documented.
 
 Private credentials must never be committed to the public repository.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 💻 13. SYSTEM REQUIREMENTS
 
@@ -422,14 +402,18 @@ Private credentials must never be committed to the public repository.
 - FFmpeg
 - HTTPS domain or secure tunnel
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 📥 14. INSTALLATION GUIDE
+
+<div align="center">
+<img src="./readme-terminal.svg" width="85%" alt="Installation in a terminal"/>
+</div>
 
 ## Step 01 — Clone Repository
 
 ```bash
-git clone https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT.git
+git clone https://github.com/raufgod/RAUF-X-LUCIFER-MD-BOT.git
 ```
 
 ## Step 02 — Enter Project Directory
@@ -472,18 +456,24 @@ The server uses:
 
 The default port is `2159` when no supported port variable overrides it.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🌍 15. HOSTING & DEPLOYMENT
 
 The application is designed for compatible Node.js 18+ environments.
+
+> ### 🚀 You can also get a VPS from us
+> Don't want to set up hosting yourself? **We have our own VPS servers, and you can buy one from us**, ready for this bot.
+>
+> 👉 **Telegram: [@Next_DYS](https://t.me/Next_DYS)**
+
 
 | PLATFORM | BEST FOR | WEBSITE |
 |:---|:---|:---|
 | Termux | Android hosting | [F-Droid](https://f-droid.org/packages/com.termux/) |
 | KataBump | Panel hosting | [KataBump](https://katabump.com) |
 | Replit | Browser-based deployment | [Replit](https://replit.com) |
-| VPS | Production hosting | Your VPS provider |
+| **VPS (from us)** | Production hosting, always on | [**Buy from us on Telegram**](https://t.me/Next_DYS) |
 
 ## Termux Installation
 
@@ -498,7 +488,7 @@ pkg install -y git nodejs ffmpeg
 ### Clone Project
 
 ```bash
-git clone https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT.git
+git clone https://github.com/raufgod/RAUF-X-LUCIFER-MD-BOT.git
 
 cd RAUF-X-LUCIFER-MD-BOT
 ```
@@ -554,6 +544,8 @@ npm start
 
 A VPS provides greater control over the runtime and hosting environment.
 
+> **Need one?** We sell VPS servers too. Message us on Telegram: **[@Next_DYS](https://t.me/Next_DYS)**
+
 Recommended deployment checks:
 
 - Node.js compatibility.
@@ -564,7 +556,7 @@ Recommended deployment checks:
 - Secure administrative access.
 - Process monitoring.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # ⚙️ 16. ENVIRONMENT CONFIGURATION
 
@@ -601,7 +593,7 @@ cp .env.example .env
 - Telegram admin IDs should contain only authorized accounts.
 - Never publish real secrets.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 📲 17. LINKING A WHATSAPP NUMBER
 
@@ -625,7 +617,7 @@ After successful connection, send:
 
 The bot should display its available command menu.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🔐 18. ADMIN PANEL
 
@@ -657,7 +649,7 @@ The ZIP upgrade system is designed not to overwrite:
 
 Incorrect admin codes are rate-limited.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🖥️ 19. WEBSITE DOCUMENTATION
 
@@ -679,7 +671,7 @@ The website can optionally use a password gate.
 
 When enabled, search engines and AI crawlers still receive a public description page.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 📂 20. PROJECT STRUCTURE
 
@@ -728,7 +720,7 @@ RAUF-X-LUCIFER-MD-BOT/
 
 This is a documentation overview; the actual repository may contain additional files.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🧪 21. TESTING & QUALITY CHECKS
 
@@ -768,7 +760,7 @@ Runs Telegram-related flow tests.
 
 These tests are designed to run offline.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🛠️ 22. TROUBLESHOOTING
 
@@ -830,7 +822,7 @@ Review the Telegram token, admin IDs, network connectivity and application logs.
 
 </details>
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🛡️ 23. SECURITY & PRIVACY
 
@@ -866,7 +858,7 @@ Security is essential when operating a WhatsApp automation application.
 
 Users should review the project's applicable privacy and cookie documentation before using its services.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🖥️ 24. VPS SERVICES
 
@@ -878,7 +870,7 @@ Users should review the project's applicable privacy and cookie documentation be
 
 </div>
 
-We also provide VPS hosting options for users who need a suitable environment for running their bots and applications.
+**We have our own VPS servers, and you can buy a VPS from us.** It is a suitable, always-on environment for running this bot and other Node.js applications.
 
 ### Why Choose a VPS?
 
@@ -902,7 +894,7 @@ We also provide VPS hosting options for users who need a suitable environment fo
 
 </div>
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 📦 25. PUBLISHING YOUR OWN COPY
 
@@ -923,7 +915,7 @@ Follow the dedicated publishing guide:
 
 Never publish another person's private session or credentials.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 🤝 26. CONTRIBUTING
 
@@ -951,7 +943,7 @@ When reporting a bug, include:
 
 Never include passwords, tokens or WhatsApp session credentials in an issue.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 👑 27. DEVELOPER & CREDITS
 
@@ -987,7 +979,7 @@ Never include passwords, tokens or WhatsApp session credentials in an issue.
 
 Thanks to the open-source developers and maintainers whose libraries and tools help make this project possible.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 # 📊 PROJECT STATISTICS
 
@@ -995,29 +987,37 @@ Thanks to the open-source developers and maintainers whose libraries and tools h
 
 ### GITHUB REPOSITORY
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Rauf-ctrl&repo=RAUF-X-LUCIFER-MD-BOT&theme=midnight-purple&hide_border=true&bg_color=0D0718" width="100%" alt="Repository Card"/>
+<a href="https://github.com/raufgod/RAUF-X-LUCIFER-MD-BOT">
+<img src="https://img.shields.io/badge/REPOSITORY-RAUF--X--LUCIFER--MD--BOT-8B5CF6?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<p>
+<img src="https://img.shields.io/github/languages/top/raufgod/RAUF-X-LUCIFER-MD-BOT?style=flat-square&color=A855F7&label=LANGUAGE"/>
+<img src="https://img.shields.io/github/repo-size/raufgod/RAUF-X-LUCIFER-MD-BOT?style=flat-square&color=9333EA&label=SIZE"/>
+<img src="https://img.shields.io/github/license/raufgod/RAUF-X-LUCIFER-MD-BOT?style=flat-square&color=6366F1&label=LICENSE"/>
+<img src="https://img.shields.io/github/last-commit/raufgod/RAUF-X-LUCIFER-MD-BOT?style=flat-square&color=8B5CF6&label=LAST%20COMMIT"/>
+</p>
 
 <br/>
 
 ### REPOSITORY ACTIVITY
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Rauf-ctrl&bg_color=0D0718&color=C084FC&line=9333EA&point=FFFFFF&area=true&hide_border=true" width="100%" alt="GitHub Activity Graph"/>
+<p>
+<img src="https://img.shields.io/github/commit-activity/m/raufgod/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=9333EA&label=COMMITS%20%2F%20MONTH"/>
+<img src="https://img.shields.io/github/commits-since/raufgod/RAUF-X-LUCIFER-MD-BOT/latest?style=for-the-badge&color=A855F7&label=SINCE%20RELEASE"/>
+</p>
 
 <br/>
 
 ### PROJECT COUNTERS
 
-<img src="https://img.shields.io/github/stars/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&label=STARS&color=8B5CF6"/>
-<img src="https://img.shields.io/github/forks/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&label=FORKS&color=9333EA"/>
-<img src="https://img.shields.io/github/issues/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&label=ISSUES&color=A855F7"/>
+<img src="https://img.shields.io/github/stars/raufgod/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&label=STARS&color=8B5CF6"/>
+<img src="https://img.shields.io/github/forks/raufgod/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&label=FORKS&color=9333EA"/>
+<img src="https://img.shields.io/github/issues/raufgod/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&label=ISSUES&color=A855F7"/>
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=22&duration=2800&pause=900&color=A855F7&center=true&vCenter=true&width=750&lines=THANK+YOU+FOR+VISITING;STAR+THE+REPOSITORY;POWERED+BY+RAUF+%C3%97+LUCIFER;THE+LEGACY+CONTINUES..." alt="Animated Footer"/>
-
-<br/><br/>
-
-<a href="https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT">
+<a href="https://github.com/raufgod/RAUF-X-LUCIFER-MD-BOT">
 
 <img src="https://img.shields.io/badge/EXPLORE%20PROJECT-GITHUB-8B5CF6?style=for-the-badge&logo=github&logoColor=white"/>
 
@@ -1029,11 +1029,11 @@ Thanks to the open-source developers and maintainers whose libraries and tools h
 
 **DEVELOPED WITH PRIDE BY RAUF**
 
-**© 2026 RAUF × LUCIFER — ALL RIGHTS RESERVED**
+**© 2026 RAUF × LUCIFER · ISC License**
 
 </div>
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 ## 📜 LICENSE
 
@@ -1041,10 +1041,12 @@ This project is licensed under the **ISC License**.
 
 See the [LICENSE](LICENSE) file for details.
 
----
+<div align="center"><img src="./readme-divider.svg" width="100%" alt=""/></div>
 
 <div align="center">
 
 **RAUF × LUCIFER — BUILT TO AUTOMATE. DESIGNED TO EVOLVE.**
 
 </div>
+
+<img src="./readme-footer.svg" width="100%" alt=""/>
