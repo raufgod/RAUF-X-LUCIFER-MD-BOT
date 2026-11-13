@@ -1,119 +1,162 @@
 
+<!-- ===================================================== -->
+<!--          RAUF × LUCIFER — PREMIUM README              -->
+<!-- ===================================================== -->
+
 <div align="center">
 
-  <img
-    src="./rauf-lucifer-banner.png"
-    alt="RAUF X LUCIFER MD BOT Banner"
-    width="100%"
-    style="max-width: 900px; height: auto; border-radius: 15px;"
-  />
+<!-- MAIN BANNER -->
+<img src="./rauf-lucifer-banner.png" width="100%" alt="RAUF X LUCIFER MD BOT Banner"/>
 
-</div>
+<br/>
 
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=24&duration=2800&pause=800&color=A855F7&center=true&vCenter=true&width=700&lines=RAUF+%C3%97+LUCIFER+MD+BOT;THE+NEXT+GENERATION+WHATSAPP+BOT;POWERFUL+%E2%80%A2+MODERN+%E2%80%A2+ADVANCED;DEVELOPED+BY+RAUF" alt="Animated Typing"/>
 
-# 亗 𝐑𝐀𝐔𝐅 × 𝐋𝐔𝐂𝐈𝐅𝐄𝐑 亗
+<br/>
 
-### 𝐌𝐃 𝐁𝐎𝐓 — 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋 𝐑𝐄𝐏𝐎𝐒𝐈𝐓𝐎𝐑𝐘
-
-**POWERFUL • MULTI DEVICE • FAST • ADVANCED**
+**A NEXT-GENERATION WHATSAPP MULTI-DEVICE PROJECT**
 
 <p>
-  <img src="https://img.shields.io/badge/RAUF%20×%20LUCIFER-8000FF?style=for-the-badge">
-  <img src="https://img.shields.io/badge/WHATSAPP-MULTI%20DEVICE-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
-  <img src="https://img.shields.io/badge/DEVELOPER-RAUF-111111?style=for-the-badge">
+<img src="https://img.shields.io/badge/PROJECT-RAUF%20×%20LUCIFER-8B5CF6?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/PLATFORM-WHATSAPP-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/>
+<img src="https://img.shields.io/badge/DEVELOPER-RAUF-111111?style=for-the-badge"/>
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/STATUS-UNDER%20DEVELOPMENT-orange?style=flat-square">
-  <img src="https://img.shields.io/badge/MAINTAINED-YES-success?style=flat-square">
-  <img src="https://img.shields.io/badge/LICENSE-SEE%20REPOSITORY-blue?style=flat-square">
+<img src="https://img.shields.io/badge/MULTI--DEVICE-SUPPORTED-9333EA?style=flat-square"/>
+<img src="https://img.shields.io/badge/PROJECT-UNDER%20DEVELOPMENT-orange?style=flat-square"/>
+<img src="https://img.shields.io/badge/TEAM-RAUF%20×%20LUCIFER-7C3AED?style=flat-square"/>
 </p>
 
-**Main Owner & Developer: RAUF**
+<br/>
 
-**Official Team: RAUF × LUCIFER**
+### 👑 MAIN OWNER & DEVELOPER
+
+# RAUF
+
+**OFFICIAL TEAM — RAUF × LUCIFER**
+
+*Built with passion. Powered by innovation.*
 
 </div>
 
 ---
 
-## 👑 ABOUT THE PROJECT
+## ◈ TABLE OF CONTENTS
 
-**RAUF × LUCIFER MD BOT** is a WhatsApp Multi-Device automation project developed and maintained by RAUF.
+- [About Project](#-about-project)
+- [Project Vision](#-project-vision)
+- [Features](#-features)
+- [WhatsApp System](#-whatsapp-system)
+- [Web Control Panel](#-web-control-panel)
+- [Telegram Integration](#-telegram-integration)
+- [Admin System](#-administration-system)
+- [API Integrations](#-api-integrations)
+- [Installation](#-installation-guide)
+- [Configuration](#-configuration)
+- [Deployment](#-deployment)
+- [Security](#-security--privacy)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
+- [Credits](#-developer--credits)
 
-The project aims to provide a powerful, customizable and user-friendly WhatsApp bot experience with automation features, session management, administrative controls, API integrations and web-based management capabilities.
+---
 
-Our goal is to create a modern bot ecosystem with a premium experience and flexible configuration.
+## 💜 ABOUT PROJECT
 
-### 🎯 PROJECT VISION
+**RAUF × LUCIFER MD BOT** is an advanced WhatsApp Multi-Device automation project developed by **RAUF**.
 
-- Powerful WhatsApp automation.
-- Modern Multi-Device architecture.
-- Easy session linking and management.
-- Advanced administration system.
+The project focuses on bringing together WhatsApp automation, account linking, session management, administrative tools, external API integrations and web-based management into one ecosystem.
+
+Our objective is to build a modern, customizable and reliable automation experience with a premium user interface.
+
+<div align="center">
+
+### THE POWER OF AUTOMATION
+
+**ONE PROJECT • MULTIPLE CAPABILITIES • ONE ECOSYSTEM**
+
+</div>
+
+---
+
+## 🎯 PROJECT VISION
+
+Our vision is to develop a flexible and modern bot platform.
+
+- Advanced automation architecture.
+- Multi-Device connectivity.
+- Convenient account linking.
+- Session management.
 - Customizable bot identity.
-- Integrated web management experience.
-- Reliable and maintainable project structure.
+- Administrative controls.
+- Web-based management.
+- External API connectivity.
+- Better user experience.
+- Continuous improvements.
 
 ---
 
-## ⚡ KEY FEATURES
+## ⚡ FEATURES
 
-| Feature | Description |
-|---|---|
-| WhatsApp MD | Multi-Device bot architecture |
-| Pairing System | Number-based pairing workflow |
-| Multi-Session | Multiple session support where enabled |
-| Admin Controls | Administrative management |
-| Owner Controls | Owner-level permissions |
+<div align="center">
+
+| ⚙️ FEATURE | ✨ DESCRIPTION |
+|:---|:---|
+| WhatsApp MD | Multi-Device architecture |
+| Pairing System | Number-based account linking |
+| Multi-Session | Multiple session management |
+| Admin Controls | Administrative permissions |
+| Owner System | Owner-level management |
 | Telegram | Telegram integration |
-| Force Join | Membership verification system |
-| Web Panel | Browser-based management |
-| API Support | External API integrations |
-| Custom Branding | Custom bot name and logo |
-| Support System | Support and assistance interface |
-| Privacy | Privacy and cookie information |
+| Force Join | Membership verification |
+| Web Panel | Browser-based interface |
+| API Integration | External API connectivity |
+| Custom Branding | Custom bot identity |
+| Support System | Support interface |
+| Privacy Pages | Privacy and cookie documentation |
 
-*Feature availability depends on the deployed version and configuration.*
+</div>
+
+*Availability depends on the installed release and its configuration.*
 
 ---
 
-## 📱 WHATSAPP BOT SYSTEM
+## 📱 WHATSAPP SYSTEM
 
-The WhatsApp bot is designed around a Multi-Device architecture.
+The WhatsApp system is designed around a Multi-Device architecture.
 
 ### Main Capabilities
 
-- WhatsApp account linking.
-- Pairing-code-based connection.
+- WhatsApp account connection.
+- Pairing-code workflow.
 - Session management.
-- Command processing.
-- Bot customization.
+- Automated command processing.
+- Group and user utilities where implemented.
 - Administrative functionality.
-- Group and user management features where implemented.
-- Automated responses and integrations.
+- Custom bot configuration.
+- Supported plugin integrations.
 
 ### 🔗 ACCOUNT LINKING
 
-The web pairing workflow is designed to help users connect their WhatsApp accounts through the available pairing interface.
+The account-linking workflow is designed to guide users through the connection process.
 
-The linking process may include:
+1. Open the available pairing interface.
+2. Select the available server.
+3. Select the country.
+4. Enter the WhatsApp number.
+5. Request a pairing code.
+6. Complete linking through WhatsApp.
 
-1. Opening the pairing page.
-2. Selecting the available server.
-3. Entering the WhatsApp number.
-4. Requesting a pairing code.
-5. Completing the linking process in WhatsApp.
-
-Never share your WhatsApp session credentials with anyone.
+**Security:** Never share your WhatsApp session credentials with unauthorized people.
 
 ---
 
 ## 🌐 WEB CONTROL PANEL
 
-The project includes a web-management concept for controlling and configuring supported bot services.
+The project includes a browser-based management interface.
 
-### Web Panel Features
+### Web Interface Components
 
 - WhatsApp linking interface.
 - Server selection.
@@ -122,39 +165,41 @@ The project includes a web-management concept for controlling and configuring su
 - Custom bot logo.
 - Support interface.
 - AI support agent.
-- Administrative management.
+- Administrative interface.
 - Session-related operations.
 
-### Available Documentation Pages
+### Documentation
 
-- Privacy Policy
-- Cookie Policy
-- Account Linking Information
-- Support Information
+| PAGE | PURPOSE |
+|:---|:---|
+| Privacy Policy | Privacy information |
+| Cookie Policy | Cookie information |
+| Pairing Interface | Account linking |
+| Support | Assistance and information |
 
 ---
 
 ## 🤖 TELEGRAM INTEGRATION
 
-Telegram integration is included in the project's supported ecosystem.
+Telegram integration extends the project's management ecosystem.
 
-Potential management capabilities include:
+Supported integration areas may include:
 
-- Telegram command handling.
+- Telegram bot commands.
 - Administrative notifications.
 - Membership verification.
-- Support-related interactions.
-- Bot management workflows.
+- Support workflows.
+- Management interactions.
 
-Telegram features depend on the configured bot and enabled modules.
+Actual availability depends on the configured Telegram modules.
 
 ---
 
-## 👨‍💻 ADMINISTRATION SYSTEM
+## 👑 ADMINISTRATION SYSTEM
 
-The administration system is intended to provide controlled access to management features.
+The administration system is designed to provide controlled access.
 
-### Administration Categories
+### Management Categories
 
 - Owner permissions.
 - Admin permissions.
@@ -165,124 +210,124 @@ The administration system is intended to provide controlled access to management
 - Membership verification.
 - Administrative notifications.
 
-Only authorized users should receive administrative permissions.
+Only authorized accounts should receive elevated permissions.
 
 ---
 
 ## 🔌 API INTEGRATIONS
 
-The project supports integrations with external API services.
+External APIs can extend the functionality of the project.
 
-API integrations can provide additional functionality without requiring every feature to be implemented locally.
+### API Architecture
 
-### Integration Information
-
-- External API endpoints.
-- Configurable API settings.
+- External endpoint connectivity.
 - Request and response handling.
+- Configurable integrations.
 - Error handling.
 - Service availability checks.
 
-Public API endpoints and their original attribution should remain documented.
+Public API integrations should retain their original attribution and documentation.
 
-Never publish private API keys, tokens or authentication credentials.
+**IMPORTANT:** Never publish private API keys, access tokens or authentication secrets.
 
 ---
 
-## 🛠️ TECHNOLOGY & REQUIREMENTS
+## 💻 TECHNOLOGY & REQUIREMENTS
 
-The exact runtime and dependencies are defined by the project source.
+The exact runtime and dependencies must match the current repository source.
 
-General deployment requirements:
+General requirements:
 
-- Git
-- Internet connection
-- Compatible runtime
-- Required project dependencies
-- Configured environment variables
-- Hosting environment
+- Compatible runtime.
+- Git.
+- Internet connectivity.
+- Required dependencies.
+- Configured environment variables.
+- Compatible hosting environment.
 
-For Node.js deployments, use the Node.js version supported by the project's dependencies.
+Use the dependency and startup files included in the actual project rather than assuming a different runtime.
 
 ---
 
 ## 📥 INSTALLATION GUIDE
 
-### STEP 1 — Clone Repository
+### 01 — Clone Repository
 
 ```bash
 git clone https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT.git
 ```
 
-### STEP 2 — Open Project
+### 02 — Open Project Directory
 
 ```bash
 cd RAUF-X-LUCIFER-MD-BOT
 ```
 
-### STEP 3 — Install Dependencies
+### 03 — Install Dependencies
 
-For a Node.js build:
+Use the installation command corresponding to the actual dependency file.
+
+For Python projects with `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+For Node.js projects with `package.json`:
 
 ```bash
 npm install
 ```
 
-### STEP 4 — Configure Environment
+### 04 — Environment Configuration
 
-Configure the required environment variables using the project's existing configuration.
+Configure the variables required by your installed release.
 
-Do not upload private credentials to GitHub.
+Keep sensitive values private.
 
-### STEP 5 — Start Application
+### 05 — Start Application
 
-For a build configured with an npm start script:
+Use the actual entry point and startup command provided by the project.
 
-```bash
-npm start
-```
-
-**Important:** Use the actual runtime and startup instructions supplied by the current project version. These Node.js commands are not applicable to a Python-only build.
+Verify the application logs after startup.
 
 ---
 
 ## ⚙️ CONFIGURATION
 
-Before deployment, review the project's configuration files.
+Review the available configuration files before deployment.
 
-Typical configuration categories:
-
-| Configuration | Purpose |
-|---|---|
-| Bot Name | Custom bot identity |
+| SETTING | PURPOSE |
+|:---|:---|
 | Owner | Owner identification |
 | Admins | Authorized administrators |
-| Telegram | Telegram integration |
-| API | External service configuration |
-| Session | WhatsApp connection |
-| Force Join | Membership verification |
+| Bot Name | Custom identity |
+| Telegram | Telegram configuration |
+| API | External integrations |
+| Session | Account connection |
 | Server | Hosting configuration |
+| Force Join | Membership verification |
 
-Keep private values outside public source control.
+Only configure options supported by the installed version.
 
 ---
 
-## 🚀 DEPLOYMENT
-
-The project can be deployed in a compatible hosting environment.
+## 🚀 DEPLOYMENT GUIDE
 
 General deployment workflow:
 
-1. Prepare the hosting environment.
-2. Upload or clone the repository.
-3. Install required dependencies.
+1. Prepare a compatible hosting environment.
+2. Clone or upload the repository.
+3. Install the required dependencies.
 4. Configure environment variables.
-5. Verify required services.
-6. Start the application.
-7. Check logs and application health.
-8. Test the pairing and management interfaces.
+5. Verify external services.
+6. Configure secure access.
+7. Start the application.
+8. Check application logs.
+9. Test the available interfaces.
+10. Verify session and management functionality.
 
-For production deployments, use a secure HTTPS connection and protect administrative access.
+For production deployments, use HTTPS and protect administrative interfaces.
 
 ---
 
@@ -292,142 +337,162 @@ Security is an important part of the project.
 
 ### Security Recommendations
 
-- Never expose Telegram bot tokens.
-- Never publish private API keys.
 - Protect WhatsApp session credentials.
-- Restrict owner and admin permissions.
+- Never expose Telegram tokens.
+- Never publish private API keys.
+- Restrict administrative permissions.
 - Use HTTPS for web interfaces.
-- Validate user input.
+- Validate external inputs.
 - Keep dependencies updated.
-- Avoid committing `.env` files.
+- Exclude `.env` and secret files from Git commits.
 - Review access to administrative endpoints.
 
 ### Privacy Documentation
 
-The project provides documentation for:
+The project includes documentation areas for:
 
-- Privacy Policy
-- Cookie Policy
-- Account Linking
-- Service Information
-- Support Information
+- Privacy Policy.
+- Cookie Policy.
+- Account Linking.
+- Service Information.
+- Support Information.
 
 Users should review the applicable policies before using the service.
 
 ---
 
-## 📚 PROJECT STRUCTURE
+## 📂 PROJECT STRUCTURE
 
-The actual directory structure may vary between releases.
+The actual structure depends on the current release.
 
-Important project components may include:
+An illustrative structure:
 
 ```text
 RAUF-X-LUCIFER-MD-BOT/
 │
 ├── assets/
+│   └── rauf-lucifer-banner.png
 │
 ├── public/
-│   ├── HTML pages
-│   ├── Stylesheets
-│   └── Frontend scripts
+│   ├── HTML
+│   ├── CSS
+│   └── JavaScript
 │
 ├── plugins/
-│
 ├── config/
 │
 ├── README.md
-├── package.json
 ├── .gitignore
-└── .env
+└── dependency files
 ```
 
-This is an illustrative structure, not a guaranteed listing of every file in the repository.
+This is a documentation example, not a complete source-file listing.
 
 ---
 
-## 🧩 COMMANDS & MODULES
+## 🧩 COMMAND SYSTEM
 
-The bot's command list depends on the installed plugins and current release.
+The command system depends on the installed modules.
 
-Command categories may include:
+### Command Categories
 
-- General Commands
-- AI Commands
-- Group Management
-- Admin Commands
-- Owner Commands
-- Utility Commands
-- Information Commands
-- Automation Commands
+| CATEGORY | PURPOSE |
+|:---|:---|
+| General | General utilities |
+| AI | AI-related functions |
+| Group | Group management |
+| Admin | Administrative commands |
+| Owner | Owner-level commands |
+| Utility | Useful tools |
+| Information | Information commands |
+| Automation | Automation functions |
 
-Refer to the actual bot menu and installed command modules for supported command names.
-
----
-
-## 🆘 TROUBLESHOOTING
-
-### Dependency Installation Problems
-
-Check the runtime version and dependency compatibility.
-
-### Pairing Problems
-
-Verify the server connection and WhatsApp account linking workflow.
-
-### Telegram Integration Problems
-
-Verify Telegram configuration and bot permissions.
-
-### Web Panel Problems
-
-Check server logs, environment configuration and HTTPS settings.
-
-### API Problems
-
-Verify the endpoint, request format and service availability.
+Refer to the actual bot menu for available commands.
 
 ---
 
-## 🤝 CONTRIBUTION
+## 🛠️ TROUBLESHOOTING
+
+<details>
+<summary><b>Dependency installation errors</b></summary>
+
+Check the runtime version and dependency compatibility. Verify the dependency file before installing.
+
+</details>
+
+<details>
+<summary><b>Pairing problems</b></summary>
+
+Verify the server connection, account number and pairing workflow. Never share session credentials.
+
+</details>
+
+<details>
+<summary><b>Telegram integration problems</b></summary>
+
+Review Telegram configuration, bot permissions and network connectivity.
+
+</details>
+
+<details>
+<summary><b>Web panel problems</b></summary>
+
+Check application logs, environment configuration and HTTPS settings.
+
+</details>
+
+<details>
+<summary><b>API connection problems</b></summary>
+
+Verify endpoint availability, request formatting and service responses.
+
+</details>
+
+---
+
+## 🤝 CONTRIBUTING
 
 Contributions and suggestions are welcome.
 
-Before submitting changes:
+1. Review the existing source.
+2. Keep changes compatible with the project.
+3. Do not expose credentials.
+4. Test modifications.
+5. Submit a clear description of your changes.
 
-1. Review the existing project structure.
-2. Avoid removing existing functionality.
-3. Keep private credentials out of commits.
-4. Test your changes.
-5. Provide a clear description of your contribution.
+Help us improve the project responsibly.
 
 ---
 
 ## ⚖️ DISCLAIMER
 
-This project is provided for educational, development and authorized automation purposes.
+This project is intended for educational, development and authorized automation purposes.
 
-- Use the project responsibly.
-- Follow applicable WhatsApp and Telegram policies.
-- Do not use the project for spam or unauthorized activities.
+- Use the software responsibly.
+- Follow WhatsApp and Telegram policies.
+- Do not use it for spam or unauthorized activities.
 - Protect your personal account and credentials.
+- Respect user privacy.
 - The developer is not responsible for misuse of the software.
 
 ---
 
-## 👑 DEVELOPER & CREDITS
+## 👨‍💻 DEVELOPER & CREDITS
 
 <div align="center">
 
-### 亗 RAUF × LUCIFER 亗
+<img src="https://img.shields.io/badge/FOUNDER-RAUF-8B5CF6?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/TEAM-RAUF%20×%20LUCIFER-111111?style=for-the-badge"/>
 
-**MAIN OWNER & DEVELOPER**
+<br/><br/>
 
-# RAUF
+# 亗 RAUF × LUCIFER 亗
 
-**TEAM RAUF × LUCIFER**
+### OFFICIAL DEVELOPMENT TEAM
 
-Built with dedication, creativity and technology.
+**MAIN OWNER & DEVELOPER — RAUF**
+
+*Creating • Developing • Improving*
 
 </div>
 
@@ -435,26 +500,52 @@ Built with dedication, creativity and technology.
 
 ## 🌟 SUPPORT THE PROJECT
 
-If you find this project useful:
+If you find this repository useful:
 
-- Star the repository.
-- Share the project.
-- Report reproducible bugs.
-- Suggest improvements.
-- Contribute responsibly.
-
-**GitHub Repository:**
-
-https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT
-
----
+- ⭐ Star the repository.
+- 🔄 Share the project.
+- 🐛 Report reproducible bugs.
+- 💡 Suggest improvements.
+- 🤝 Contribute responsibly.
 
 <div align="center">
 
+<a href="https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT">
+<img src="https://img.shields.io/badge/EXPLORE%20REPOSITORY-8B5CF6?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<br/><br/>
+
+### PROJECT STATISTICS
+
+<img src="https://img.shields.io/github/stars/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=8B5CF6&label=STARS"/>
+<img src="https://img.shields.io/github/forks/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=9333EA&label=FORKS"/>
+<img src="https://img.shields.io/github/issues/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT?style=for-the-badge&color=A855F7&label=ISSUES"/>
+
+<br/><br/>
+
+### GITHUB CONTRIBUTION ACTIVITY
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Rauf-ctrl&bg_color=0d0718&color=c084fc&line=9333ea&point=ffffff&area=true&hide_border=true" width="100%" alt="Contribution Activity"/>
+
+<br/>
+
+### GITHUB PROFILE
+
+<img src="https://github-readme-stats.vercel.app/api?username=Rauf-ctrl&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=0d0718&title_color=c084fc&icon_color=a855f7" width="100%" alt="GitHub Statistics"/>
+
+<br/><br/>
+
+<img src="https://komarev.com/ghpvc/?username=Rauf-ctrl&label=REPOSITORY%20VISITORS&color=8B5CF6&style=for-the-badge" alt="Visitor Counter"/>
+
+<br/><br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&width=650&lines=THANK+YOU+FOR+VISITING;POWERED+BY+RAUF+%C3%97+LUCIFER;THE+LEGACY+CONTINUES..." alt="Footer Animation"/>
+
+<br/>
+
 # 亗 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐑𝐀𝐔𝐅 × 𝐋𝐔𝐂𝐈𝐅𝐄𝐑 亗
 
-**DEVELOPED BY RAUF**
-
-**© 2026 RAUF × LUCIFER**
+**© 2026 RAUF × LUCIFER — ALL RIGHTS RESERVED**
 
 </div>
