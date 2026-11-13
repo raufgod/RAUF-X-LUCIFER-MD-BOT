@@ -1,4 +1,8 @@
-
+<div align="center">
+  <img src="./banner.png"
+       width="100%"
+       alt="RAUF X LUCIFER Banner">
+</div>
 <div align="center">
 
 # 亗 𝐑𝐀𝐔𝐅 × 𝐋𝐔𝐂𝐈𝐅𝐄𝐑 亗
