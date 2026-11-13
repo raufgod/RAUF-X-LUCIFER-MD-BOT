@@ -1,0 +1,24 @@
+const card = require('../lib/cardStyle');
+const fetch = require('node-fetch');
+
+async function rosedayCommand(sock, chatId, message) {
+    try {
+        
+        const res = await fetch(`https://api.princetechn.com/api/fun/roseday?apikey=prince`);
+        
+        if (!res.ok) {
+            throw await res.text();
+        }
+        
+        const json = await res.json();
+        const rosedayMessage = json.result;
+
+        // Send the roseday message
+        await sock.sendMessage(chatId, { text: card.panel({ icon: '🌹', title: 'Rose Day', body: rosedayMessage }) }, { quoted: message });
+    } catch (error) {
+        console.error('Error in roseday command:', error);
+        await sock.sendMessage(chatId, { text: card.problem('Failed to get roseday quote. Please try again later!') }, { quoted: message });
+    }
+}
+
+module.exports = { rosedayCommand };

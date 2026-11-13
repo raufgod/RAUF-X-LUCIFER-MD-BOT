@@ -1,0 +1,304 @@
+/* =====================================================================
+   RAUF × LUCIFER MD BOT - enhance.css
+   Added on top of site.css (site.css / site.js / pair.js are untouched).
+   1. Vertical-only scrolling   2. Glitch fixes   3. Visual + UI/UX layer
+   4. Animation switch (ON/OFF) and level control
+   ===================================================================== */
+
+:root{--fx:1}
+
+/* ---------- 1. VERTICAL SCROLL ONLY (no left / right scrolling) ---------- */
+html{
+  overflow-x:clip;                 /* nothing can ever scroll sideways */
+  overscroll-behavior-x:none;      /* no sideways rubber-band / swipe-back */
+  touch-action:pan-y pinch-zoom;   /* phones: finger moves the page up/down only */
+  scroll-behavior:auto;            /* see glitch fix below */
+  scrollbar-width:thin;
+  scrollbar-color:color-mix(in srgb,var(--blue) 70%,transparent) transparent;
+  -webkit-text-size-adjust:100%;
+}
+body{
+  overflow-x:clip;
+  max-width:100%;
+  min-height:100vh;min-height:100dvh;   /* mobile address-bar safe */
+  -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent;
+}
+@supports not (overflow:clip){html,body{overflow-x:hidden}}
+
+/* grid / flex children are allowed to shrink, so wide content can't push the page wider */
+.wrap,.wrap>*,main,main>*,.cgrid>*,.docgrid>*,.hero.home>*,.fgrid>*,.tiles>*,.feat>*,.qs>*,.sup>*{min-width:0}
+.card,.pg,.band{max-width:100%}
+img,video,iframe,canvas{max-width:100%}
+input,select,textarea{max-width:100%}
+body{overflow-wrap:break-word}
+pre,code,kbd,samp{overflow-wrap:anywhere}
+pre{white-space:pre-wrap;max-width:100%}
+table{max-width:100%}
+td,th{overflow-wrap:anywhere}
+
+/* rows that used to swipe sideways now wrap onto the next line instead */
+.qk,.tabs,.toc,.wa-q{flex-wrap:wrap;overflow-x:visible;overflow-y:visible}
+@media (min-width:900px){.toc{flex-wrap:nowrap}}
+.wa-q{max-height:76px;overflow-y:auto;scrollbar-width:none}.wa-q::-webkit-scrollbar{display:none}
+
+/* ---------- 2. GLITCH FIXES ---------- */
+/* hero light-streak used left/right:-30% and made the home page wider than the screen */
+.hero.home::before{left:0;right:0}
+.hero.home{overflow-x:clip}
+
+/* animated full-screen film-grain with blend mode = flicker + scroll jank. Now static, off on touch screens */
+html::after{inset:0;animation:none;opacity:.055}
+@media (hover:none),(max-width:700px){html::after{display:none}}
+
+/* reveal used blur() on every section = repaint stutter; keep fade + slide only */
+.rv{filter:none!important;will-change:auto;transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+
+/* heavy blurred orbs are expensive on phones */
+.orb{will-change:transform;opacity:calc(.35*var(--fx))}
+@media (max-width:700px){.orb{filter:blur(42px)}}
+#bg,#gl{opacity:min(1,var(--fx))}
+
+/* theme/menu popups must never be wider than the phone */
+.thm .pop{max-width:calc(100vw - 24px)}
+
+/* ---------- 3. VISUALS + UI/UX ---------- */
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.cta:active,nav a.pill:active,.snd:active{transform:scale(.96)}
+
+/* 3a. living background: moving perspective grid + light beams (behind everything) */
+.e-bg{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden;opacity:min(1,var(--fx))}
+.e-grid{position:absolute;left:0;right:0;top:-56px;bottom:0;opacity:.55;
+  background-image:linear-gradient(color-mix(in srgb,var(--cyan) 15%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--cyan) 15%,transparent) 1px,transparent 1px);
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(ellipse 85% 62% at 50% 28%,#000 0,transparent 78%);mask-image:radial-gradient(ellipse 85% 62% at 50% 28%,#000 0,transparent 78%);
+  animation:e-grid 9s linear infinite;
+  translate:0 calc(var(--sy,0)*-.04px)}
+@keyframes e-grid{to{transform:translateY(56px)}}
+.e-beam{position:absolute;top:-25%;height:150%;width:34vmax;filter:blur(34px);opacity:.55;
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--cyan) 13%,transparent),transparent)}
+.e-beam.b1{left:8%;transform:rotate(18deg);animation:e-b1 16s ease-in-out infinite alternate}
+.e-beam.b2{right:4%;transform:rotate(-16deg);animation:e-b2 21s ease-in-out infinite alternate;opacity:.4}
+@keyframes e-b1{to{transform:translateX(18vw) rotate(24deg)}}
+@keyframes e-b2{to{transform:translateX(-16vw) rotate(-22deg)}}
+html[data-theme=pro] .e-bg,html[data-theme=frost] .e-bg{display:none}
+
+/* 3b. staggered entrance for grids (cards, steps, stats, chips) */
+.e-stg>*{opacity:0;transform:translateY(24px) scale(.97)}
+.e-stg.e-in>*{opacity:1;transform:none;transition:opacity .65s cubic-bezier(.2,.8,.2,1),transform .65s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*75ms)}
+
+/* 3c. heading accent that draws itself */
+section>h2::after{content:"";display:block;height:3px;width:58px;margin-top:9px;border-radius:3px;background:linear-gradient(90deg,var(--blue),var(--cyan));transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.8,.2,1) .25s}
+section.in>h2::after,section:not(.rv)>h2::after{transform:scaleX(1)}
+
+/* 3d. cards: 3D tilt + spotlight that follows the pointer */
+.tile,.feat div,.sc{transform-style:preserve-3d}
+.tile:hover,.feat div:hover{transform:perspective(800px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg)) translateY(-5px)}
+.tile::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(260px circle at var(--px,50%) var(--py,50%),color-mix(in srgb,var(--cyan) 20%,transparent),transparent 70%)}
+.tile:hover::before{opacity:1}
+.steps li{transition:transform .25s,border-color .3s,box-shadow .3s}
+.steps li:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 18px 40px -26px var(--blue)}
+.stats div{transition:transform .25s,border-color .3s}.stats div:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.chips b{transition:transform .25s,border-color .3s,color .3s}.chips b:hover{transform:translateY(-2px);border-color:var(--cyan);color:#fff}
+
+/* 3e. call-to-action band gets a travelling light border */
+.band{position:relative;isolation:isolate}
+.band::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;z-index:-1;
+  background:conic-gradient(from var(--a,0deg),transparent 0 62%,var(--cyan),var(--blue),transparent);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+  animation:rot 6s linear infinite}
+
+/* 3f. second command ticker running the other way */
+.tick.e-rev{margin-top:-1px;opacity:.85}
+.tick.e-rev>div{animation-direction:reverse;animation-duration:34s}
+
+/* 3g. "scroll down" cue under the hero (page only moves up/down) */
+.e-cue{display:flex;flex-direction:column;align-items:center;gap:6px;margin:20px auto 0;width:max-content;color:var(--mute);font:700 11px 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:opacity .4s}
+.e-cue i{width:22px;height:36px;border:2px solid var(--line);border-radius:14px;position:relative;display:block}
+.e-cue i::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:3px;background:var(--cyan);animation:e-wheel 1.7s ease-in-out infinite}
+@keyframes e-wheel{0%{transform:translateY(0);opacity:1}70%{transform:translateY(12px);opacity:0}100%{opacity:0}}
+html.e-scrolled .e-cue{opacity:0;pointer-events:none}
+
+/* 3h. hero crown drifts slowly against the scroll (parallax) */
+.hero.home .hl .orbit{translate:0 calc(var(--sy,0)*.07px*var(--fx))}
+
+/* ---------- floating controls: Animations + Back to top ---------- */
+.e-ctl{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.e-fab,.e-top{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);cursor:pointer;display:grid;place-items:center;color:var(--text);
+  background:color-mix(in srgb,var(--ink) 84%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 30px #0008;transition:transform .2s,border-color .25s,background .25s}
+.e-fab:hover,.e-top:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.e-fab:active,.e-top:active{transform:scale(.94)}
+.e-fab svg,.e-top svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.e-fab[aria-expanded=true]{border-color:var(--cyan);background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff}
+.e-fab .on{display:block}.e-fab .off{display:none}
+html.e-off .e-fab .on{display:none}html.e-off .e-fab .off{display:block}
+.e-fab::after{content:"";position:absolute;right:3px;top:3px;width:10px;height:10px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 2px var(--ink)}
+html.e-off .e-fab::after{background:var(--err)}
+.e-fab{position:relative}
+.e-top{opacity:0;transform:translateY(10px);pointer-events:none}
+.e-top.show{opacity:1;transform:none;pointer-events:auto}
+.e-panel{position:absolute;right:0;bottom:calc(100% + 10px);width:min(300px,calc(100vw - 28px));padding:16px;border-radius:20px;color:var(--text);
+  background:color-mix(in srgb,var(--ink) 92%,transparent);border:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 24px 70px #000a;
+  transform-origin:100% 100%;animation:e-pop .22s cubic-bezier(.2,.9,.3,1)}
+.e-panel[hidden]{display:none}
+@keyframes e-pop{from{opacity:0;transform:translateY(8px) scale(.95)}}
+.e-ph{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.e-ph b{font:800 15px Sora,sans-serif}
+.e-ph small{display:block;font:500 12px 'DM Sans',sans-serif;color:var(--mute);margin-top:2px}
+.e-sw{flex:none;position:relative;width:74px;height:34px;border-radius:99px;border:1px solid var(--line);cursor:pointer;color:#fff;font:800 12px 'DM Sans',sans-serif;letter-spacing:.08em;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));text-align:left;padding:0 0 0 12px;transition:background .25s,border-color .25s}
+.e-sw span{position:relative;z-index:1}
+.e-sw i{position:absolute;top:3px;right:3px;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 2px 8px #0006;transition:right .25s cubic-bezier(.2,.9,.3,1)}
+.e-sw[aria-checked=false]{background:var(--ink3);color:var(--mute);text-align:right;padding:0 12px 0 0}
+.e-sw[aria-checked=false] i{right:calc(100% - 29px);background:var(--mute)}
+.e-lv{margin-top:16px;display:flex;align-items:baseline;justify-content:space-between;font:700 13px 'DM Sans',sans-serif}
+.e-lv output{font:800 18px Sora,sans-serif;color:var(--cyan)}
+.e-slide{display:flex;align-items:center;gap:10px;margin-top:8px}
+.e-step{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--ink2);color:var(--text);font:800 18px/1 'DM Sans',sans-serif;cursor:pointer}
+.e-step:hover{border-color:var(--cyan)}
+.e-range{flex:1;min-width:0;height:34px;margin:0;background:none;-webkit-appearance:none;appearance:none;cursor:pointer;touch-action:pan-x}
+.e-range::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--blue),var(--cyan) var(--p,45%),var(--line) var(--p,45%))}
+.e-range::-moz-range-track{height:6px;border-radius:6px;background:var(--line)}
+.e-range::-moz-range-progress{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.e-range::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-8px;border-radius:50%;background:#fff;border:3px solid var(--cyan);box-shadow:0 2px 10px #0008}
+.e-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--cyan)}
+.e-pre{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px}
+.e-pre button{border:1px solid var(--line);background:var(--ink2);color:var(--text);border-radius:10px;padding:7px 0;font:700 12px 'DM Sans',sans-serif;cursor:pointer}
+.e-pre button:hover{border-color:var(--cyan)}.e-pre button.on{border-color:var(--cyan);background:color-mix(in srgb,var(--blue) 28%,var(--ink2));color:#fff}
+.e-note{margin-top:12px;font:500 12px/1.45 'DM Sans',sans-serif;color:var(--mute)}
+.e-panel.dis .e-lv,.e-panel.dis .e-slide,.e-panel.dis .e-pre{opacity:.4;pointer-events:none}
+
+/* ---------- 4. ANIMATIONS SWITCHED OFF ---------- */
+html.e-off *,html.e-off *::before,html.e-off *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html.e-off .rv,html.e-off .e-stg>*{opacity:1!important;transform:none!important;filter:none!important}
+html.e-off section>h2::after{transform:scaleX(1)}
+html.e-off #bg,html.e-off #gl,html.e-off .orb,html.e-off .spot,html.e-off .e-bg,html.e-off .ripple,html.e-off .e-cue{display:none!important}
+html.e-off::after{display:none!important}
+html.e-off .hero.home .hl .orbit{translate:none}
+html.e-off .e-top.show{opacity:1}
+html.e-off .e-panel{animation:none}
+
+@media (prefers-reduced-motion:reduce){.e-grid,.e-beam,.band::before,.e-cue i::after{animation:none}}
+
+/* =====================================================================
+   5. NEW PARTS: Commands page, "Try these first", FAQ, search palette, skip link
+   ===================================================================== */
+.skip{position:fixed;left:12px;top:-64px;z-index:200;background:var(--cyan);color:#001;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none;transition:top .2s}
+.skip:focus{top:max(12px,env(safe-area-inset-top))}
+nav .links a[aria-current=page],.drawer a[aria-current=page]{color:var(--text)}
+
+/* floating cluster: search button joins back-to-top + animations */
+.e-sbtn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);cursor:pointer;display:grid;place-items:center;color:var(--text);
+  background:color-mix(in srgb,var(--ink) 84%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 30px #0008;transition:transform .2s,border-color .25s}
+.e-sbtn:hover{border-color:var(--cyan);transform:translateY(-2px)}.e-sbtn:active{transform:scale(.94)}
+.e-sbtn svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.e-top:not(.show){display:none}
+
+/* inline command snippets that copy on tap */
+code.cp{cursor:pointer;transition:border-color .2s,background .2s}
+code.cp:hover{border-color:var(--cyan)}
+
+/* ---- home: Try these first ---- */
+.try-sub{color:var(--mute);margin:-6px 0 16px}
+.try{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:10px}
+.try-c{position:relative;display:grid;gap:3px;text-align:left;cursor:pointer;color:var(--text);font:inherit;
+  background:linear-gradient(180deg,var(--ink2),var(--ink3));border:1px solid var(--line);border-radius:14px;padding:13px 70px 13px 15px;transition:transform .2s,border-color .25s,box-shadow .25s}
+.try-c code{background:none;border:0;padding:0;font:700 15px ui-monospace,Menlo,monospace;color:var(--cyan);overflow-wrap:anywhere}
+.try-c span{color:var(--mute);font-size:13.5px;line-height:1.4}
+.try-c::after{content:"Copy";position:absolute;right:12px;top:12px;font:700 11px 'DM Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:3px 9px}
+.try-c:hover{border-color:var(--cyan);transform:translateY(-3px);box-shadow:0 16px 36px -24px var(--blue)}
+.try-c.copied{border-color:var(--ok)}.try-c.copied::after{content:"Copied \2713";color:var(--ok);border-color:var(--ok)}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--cyan);font-weight:700;text-decoration:none}
+.more span{transition:transform .25s}.more:hover span{transform:translateX(5px)}
+
+/* ---- home: FAQ ---- */
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{padding:2px 0}
+.faq details[open] summary{color:var(--cyan)}
+.faq p{line-height:1.65}
+.faq p a,.cm-empty a,.cm-note a{color:var(--cyan)}
+.faq details[open] p{animation:e-fade .35s ease}
+@keyframes e-fade{from{opacity:0;transform:translateY(-4px)}}
+
+/* ---- Commands page ---- */
+.cm-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:20px 0 14px}
+.cm-search{position:relative;flex:1 1 260px;display:block;min-width:0}
+.cm-search svg{position:absolute;left:15px;top:50%;width:19px;height:19px;margin-top:-9.5px;fill:none;stroke:var(--mute);stroke-width:2;stroke-linecap:round;pointer-events:none}
+.cm-search input{width:100%;height:50px;border-radius:15px;border:1px solid var(--line);background:var(--ink);color:var(--text);padding:0 16px 0 46px;font:500 16px 'DM Sans',sans-serif;outline:none;transition:border-color .2s,box-shadow .2s}
+.cm-search input:focus{border-color:var(--cyan);box-shadow:0 0 0 4px color-mix(in srgb,var(--cyan) 18%,transparent)}
+.cm-count{font:700 13px 'DM Sans',sans-serif;color:var(--mute)}
+.cm-cats{display:flex;flex-wrap:wrap;gap:8px}
+.cm-cats.collapsed{max-height:76px;overflow:hidden}
+.cm-chip{border:1px solid var(--line);background:var(--ink2);color:var(--text);border-radius:99px;padding:7px 13px;font:600 13px 'DM Sans',sans-serif;cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
+.cm-chip em{font-style:normal;color:var(--mute);margin-left:3px}
+.cm-chip:hover{border-color:var(--cyan)}
+.cm-chip.on{border-color:var(--cyan);background:linear-gradient(135deg,color-mix(in srgb,var(--blue) 45%,var(--ink2)),color-mix(in srgb,var(--cyan) 28%,var(--ink2)));color:#fff}
+.cm-chip.on em{color:#ffffffb8}
+.cm-more{margin-top:8px;border:0;background:none;color:var(--cyan);font:700 13px 'DM Sans',sans-serif;cursor:pointer;padding:6px 0}
+.cm-more[hidden]{display:none}
+.cm-grp>h2::after{display:none}
+.cm-grp h2{display:flex;align-items:baseline;gap:8px;font:700 18px Sora,sans-serif;margin:28px 0 12px}
+.cm-grp h2 em{font:600 13px 'DM Sans',sans-serif;font-style:normal;color:var(--mute)}
+.cm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:10px}
+.cm-it{position:relative;text-align:left;cursor:pointer;color:var(--text);font:inherit;min-width:0;
+  background:linear-gradient(180deg,var(--ink2),var(--ink3));border:1px solid var(--line);border-radius:14px;padding:11px 14px;transition:transform .2s,border-color .25s,box-shadow .25s}
+.cm-it b{display:block;font:700 15px ui-monospace,Menlo,monospace;color:var(--cyan);overflow-wrap:anywhere}
+.cm-it span{display:block;color:var(--mute);font-size:13px;line-height:1.4;margin-top:3px}
+.cm-it code{display:block;margin-top:6px;padding:0;border:0;background:none;font:500 12px ui-monospace,Menlo,monospace;color:var(--text);opacity:.85;overflow-wrap:anywhere}
+.cm-it:hover{border-color:var(--cyan);transform:translateY(-2px);box-shadow:0 14px 30px -22px var(--blue)}
+.cm-it.copied{border-color:var(--ok)}
+.cm-it.copied::after{content:"Copied \2713";position:absolute;right:10px;top:10px;font:700 11px 'DM Sans',sans-serif;color:var(--ok)}
+.cm-empty{padding:26px 18px;text-align:center;color:var(--mute);border:1px dashed var(--line);border-radius:16px;margin-top:18px}
+.cm-note{margin-top:26px;color:var(--mute);font-size:14px}
+
+/* ---- search palette ---- */
+.pal{position:fixed;inset:0;z-index:120;display:flex;align-items:flex-start;justify-content:center;padding:max(10vh,20px) 14px 14px}
+.pal[hidden]{display:none}
+.pal-bg{position:absolute;inset:0;background:#000c;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pal-box{position:relative;width:min(640px,100%);max-height:min(74vh,580px);display:flex;flex-direction:column;border-radius:20px;background:var(--ink);border:1px solid var(--line);box-shadow:0 30px 90px #000d;overflow:hidden;animation:e-pop .2s cubic-bezier(.2,.9,.3,1)}
+.pal-in{display:flex;align-items:center;gap:10px;padding:0 14px;border-bottom:1px solid var(--line)}
+.pal-in svg{flex:none;width:20px;height:20px;fill:none;stroke:var(--mute);stroke-width:2;stroke-linecap:round}
+.pal-in input{flex:1;min-width:0;height:56px;border:0;outline:none;background:none;color:var(--text);font:500 16px 'DM Sans',sans-serif}
+.pal-in kbd,.pal-f{font:600 11px 'DM Sans',sans-serif;color:var(--mute)}
+.pal-in kbd{border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+.pal-l{overflow-y:auto;overscroll-behavior:contain;padding:6px 8px 10px;min-height:80px}
+.pal-h{font:700 11px 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding:12px 10px 5px}
+.pal-it{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:0;background:none;color:var(--text);padding:9px 10px;border-radius:12px;cursor:pointer;font:inherit}
+.pal-it i{flex:none;width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:var(--ink2);border:1px solid var(--line);font:700 16px ui-monospace,Menlo,monospace;font-style:normal;color:var(--cyan)}
+.pal-it span{flex:1;min-width:0}
+.pal-it b{display:block;font:700 14.5px 'DM Sans',sans-serif;overflow-wrap:anywhere}
+.pal-it small{display:block;color:var(--mute);font-size:12.5px;line-height:1.35}
+.pal-it em{flex:none;font:700 11px 'DM Sans',sans-serif;font-style:normal;color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.pal-it[aria-selected=true]{background:color-mix(in srgb,var(--blue) 30%,var(--ink2))}
+.pal-it[aria-selected=true] em{color:var(--cyan)}
+.pal-empty{padding:28px 14px;text-align:center;color:var(--mute)}
+.pal-f{display:flex;gap:16px;padding:9px 16px;border-top:1px solid var(--line)}
+@media (hover:none){.pal-f{display:none}.pal-in kbd{display:none}}
+html.e-off .pal-box{animation:none}
+
+/* ---------- 6. NAV FITS AT EVERY WIDTH (a 9th link was added, so the bar needs more room) ---------- */
+@media (min-width:900px){.links a{padding:8px 7px;font-size:13px}}
+@media (min-width:900px) and (max-width:1059px){
+  nav .links{display:none}                      /* tablets / small laptops use the menu button */
+  nav .mb{display:inline-block!important}
+}
+@media (min-width:1060px) and (max-width:1239px){
+  nav .pill{display:none!important}             /* "Link WhatsApp" is already in the bar */
+}
+@media (min-width:1240px){.wrap{max-width:1180px}}
+@media (max-width:360px){
+  .brand{font-size:15px;gap:7px}.brand svg{width:26px;height:26px}
+  .snd{width:34px;height:34px;margin-right:4px;font-size:15px}
+}
+@media (max-width:340px){
+  .wrap{padding-left:12px;padding-right:12px}
+  .brand{font-size:14px;gap:5px}.brand svg{width:22px;height:22px}
+  .snd{width:32px;height:32px;margin-right:3px}
+}
+
+/* light build: no backdrop blur anywhere (it re-renders every frame and makes phones lag); big blurred glows are dropped too */
+/* (v23) global blur-kill removed: liquid glass needs backdrop-filter */
+.orb,.spot{display:none!important}
+html{scroll-behavior:auto}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Runtime data
+tmp/
+temp/
+session/
+
+# Environment
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime records (never overwritten by updates)
+state/
+backups/
+multi_sessions/
+baileys_store.json
+
+# Local secrets
+ngrok.txt

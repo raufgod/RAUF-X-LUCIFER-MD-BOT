@@ -1,0 +1,11 @@
+const assert = require('node:assert/strict');
+const settings = require('../settings');
+assert.equal(settings.botName, 'RAUF × LUCIFER MD BOT');
+assert.equal(global.botName, settings.botName);
+assert.equal(global.botname, settings.botName);
+assert.match(settings.channelLink, /^https:\/\/whatsapp\.com\/channel\//);
+const ping = require('../commands/ping');
+assert.equal(typeof ping, 'function');
+const help = require('../commands/help');
+assert.equal(typeof help, 'function');
+console.log('Smoke test: settings, branding globals, channel URL, core command exports passed');

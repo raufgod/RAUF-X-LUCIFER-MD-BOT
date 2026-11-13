@@ -1,0 +1,4 @@
+# Line 1: your ngrok authtoken (dashboard.ngrok.com)
+# Line 2 (optional): your free static ngrok domain
+NGROK_AUTHTOKEN=
+NGROK_DOMAIN=

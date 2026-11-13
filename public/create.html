@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" data-theme="black">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Create your own bot - RAUF × LUCIFER MD BOT</title>
+<meta name="description" content="Create your own WhatsApp bot with your name, prefix, links and logo. Try a free demo chat, then link your number."><meta name="robots" content="index,follow,max-image-preview:large"><meta name="application-name" content="RAUF × LUCIFER MD BOT"><meta name="author" content="RAUF × LUCIFER"><meta name="keywords" content="WhatsApp bot, multi device WhatsApp bot, WhatsApp pairing code, Baileys, Node.js, WhatsApp commands, AI chatbot, sticker bot, music downloader bot, group management bot, free WhatsApp bot"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website"><meta property="og:site_name" content="RAUF × LUCIFER MD BOT"><meta property="og:title" content="Create your own bot - RAUF × LUCIFER MD BOT"><meta property="og:description" content="Create your own WhatsApp bot with your name, prefix, links and logo. Try a free demo chat, then link your number.">
+<meta name="theme-color" content="#04120e">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M6 46 4 18l15 12 13-20 13 20 15-12-2 28z' fill='%23f6b93b'/%3E%3Crect x='6' y='48' width='52' height='8' rx='3' fill='%23f6b93b'/%3E%3Ccircle cx='32' cy='10' r='4' fill='%2319d3ff'/%3E%3Ccircle cx='4' cy='18' r='3.5' fill='%232f7bff'/%3E%3Ccircle cx='60' cy='18' r='3.5' fill='%232f7bff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&amp;family=DM+Sans:wght@400;700&amp;display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&amp;family=DM+Sans:wght@400;700&amp;display=swap"></noscript>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/enhance.css"><link rel="stylesheet" href="/assets/enhance2.css"><link rel="stylesheet" href="/assets/enhance3.css"><link rel="stylesheet" href="/assets/legal.css"><link rel="stylesheet" href="/assets/ios.css">
+</head>
+<body data-page="create">
+<div class="prog" id="prog"></div><div class="toast" id="toast" role="status"></div>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="dr" aria-label="Menu">
+  <div class="dh"><a class="brand" href="/" data-nav><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#crown"/></svg>RAUF × LUCIFER MD BOT</a><button type="button" id="dx" aria-label="Close menu">&times;</button></div>
+  <a href="/" data-nav>Home</a><a href="/pair" data-nav>Link WhatsApp</a><a href="/create" data-nav>Create Bot</a><a href="/preview" data-nav>Preview</a><a href="/ai" data-nav>AI Support</a><a href="/commands" data-nav>Commands</a><a href="/learn" data-nav>Learn</a><a href="/docs" data-nav>Docs</a><a href="/support" data-nav>Support</a>
+  <div class="dt">Support</div><div class="fsup" id="dsup" style="padding:0 4px"></div>
+</aside>
+<div class="wrap">
+  <nav>
+    <div class="nl"><button class="snd mb" id="mb" type="button" aria-label="Open menu">&#9776;</button><a class="brand" href="/" data-nav style="text-decoration:none;color:inherit"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#crown"/></svg>RAUF × LUCIFER MD BOT</a></div>
+    <div class="links"><a href="/" data-nav>Home</a><a href="/pair" data-nav>Link WhatsApp</a><a href="/create" data-nav>Create Bot</a><a href="/preview" data-nav>Preview</a><a href="/ai" data-nav>AI Support</a><a href="/commands" data-nav>Commands</a><a href="/learn" data-nav>Learn</a><a href="/docs" data-nav>Docs</a><a href="/support" data-nav>Support</a></div>
+    <a class="pill" href="/pair" data-nav>Link device</a>
+  </nav>
+  <main id="app">
+<div class="pg"><h1>Create your own bot</h1><p class="pgl">Your own WhatsApp bot with your name, your links and your logo. Fill the details, pick a server and link your number. <b>Developer: RAUF × LUCIFER</b>, <b>Owner: you</b>.</p>
+<div class="cgrid">
+ <div class="card"><h3 class="step">1 &middot; Bot details</h3>
+  <label class="fld" for="cb-name">Bot name *<input id="cb-name" type="text" placeholder="My Super Bot" autocomplete="off" maxlength="30"><small>Shown in the menu and as the forwarded label</small></label>
+  <label class="fld" for="cb-owner">Owner name *<input id="cb-owner" type="text" placeholder="Your name" autocomplete="off" maxlength="30"><small>Shown as Owner in the menu</small></label>
+  <label class="fld" for="cb-prefix">Command prefix<input id="cb-prefix" type="text" placeholder="." autocomplete="off" maxlength="3" value="."><small>1 to 3 symbols, for example  .  !  #  /</small></label>
+  <label class="fld" for="cb-channel">WhatsApp channel link<input id="cb-channel" type="text" placeholder="https://whatsapp.com/channel/..." autocomplete="off" maxlength="200"><small>Optional</small></label>
+  <label class="fld" for="cb-tg">Telegram link<input id="cb-tg" type="text" placeholder="https://t.me/yourname" autocomplete="off" maxlength="200"><small>Optional</small></label>
+  <label class="fld" for="cb-web">Website link<input id="cb-web" type="text" placeholder="https://yourwebsite.com" autocomplete="off" maxlength="200"><small>Optional</small></label>
+  <label class="fld" for="cb-logo">Logo image link<input id="cb-logo" type="text" placeholder="https://.../logo.png" autocomplete="off" maxlength="200"><small>Optional. A direct https link to a JPG, PNG or WEBP picture. It becomes the menu image.</small></label>
+ </div>
+ <div class="card prv"><h3 class="step">Try your bot first <span class="trial">FREE DEMO</span></h3>
+  <div class="dm"><div class="dm-top"><span class="av">&#128081;</span><div><b id="dm-name">My Bot</b><small>online &middot; demo</small></div></div>
+   <div class="ph-chat" id="dm-chat"></div>
+   <div class="dm-q" id="dm-q"><button type="button" data-c="menu"></button><button type="button" data-c="ping"></button><button type="button" data-c="alive"></button><button type="button" data-c="owner"></button></div>
+   <div class="dm-in"><input id="dm-in" placeholder="Type a command..." autocomplete="off"><button id="dm-go" type="button">&#10148;</button></div></div>
+  <p class="hint">Demo only: nothing is sent to WhatsApp. Link your number below to get the real bot with 370+ commands.</p>
+ </div>
+</div>
+<div class="narrow"><h3 class="step" style="margin-top:26px">2 &middot; Server and WhatsApp number</h3><div class="srvbox"><div class="srvh"><b>Choose a server</b><span>Every server connects to the same bot</span></div><div class="cpick spick" id="spick"><button type="button" class="cbtn" id="srvbtn" aria-haspopup="listbox"></button><div class="cmenu" id="srvmenu"><div class="clist" id="srvlist" role="listbox"></div></div></div></div>
+    <div class="card" id="formCard">
+      <div class="stp" id="stp"><span class="on"><b>1</b>Number</span><span><b>2</b>Code</span><span><b>3</b>Connected</span></div>
+      <label for="num">Country code &amp; WhatsApp number</label>
+      <div class="row">
+        <div class="cpick" id="cpick">
+          <button type="button" class="cbtn" id="cbtn" aria-haspopup="listbox"><span id="cflag">🇮🇳</span><span id="cdial">+91</span><span class="car">▾</span></button>
+          <div class="cmenu" id="cmenu"><input id="csearch" type="text" placeholder="Search country or code…" autocomplete="off"><div class="clist" id="clist" role="listbox"></div></div>
+        </div>
+        <input id="num" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="9876543210" maxlength="15">
+      </div>
+      <div class="hint">Type the number without the country code or a leading 0.</div>
+      <label for="aikey" style="margin-top:18px">AI API key <span style="opacity:.6;font-weight:400">(optional · Groq)</span></label>
+      <input id="aikey" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your Groq API key (gsk_...)">
+      <div class="hint">For <b>voice messages to AI</b> (.gpt, .deepseek ...). Without a key, voice messages will not be sent to AI. Free key: <a href="https://console.groq.com/keys" target="_blank" rel="noopener">console.groq.com/keys</a>. You can also add it later in WhatsApp with <b>.aikey</b>.</div>
+      <button class="main" id="go">Get pairing code</button>
+      <div class="msg" id="msg" role="alert"></div>
+    </div>
+
+    <div class="card codebox" id="codeCard">
+      <div class="lbl">Your pairing code</div>
+      <div class="code" id="code">----</div>
+      <div class="timer" id="timer"></div>
+      <button class="ghost" id="copy">Copy code</button>
+      <ol>
+        <li>Open <b>WhatsApp</b> on your phone</li>
+        <li>Go to <b>Settings → Linked devices → Link a device</b></li>
+        <li>Tap <b>Link with phone number instead</b></li>
+        <li>Enter the code above</li>
+      </ol>
+    </div>
+
+    <div class="card done" id="doneCard">
+      <div class="tick">✅</div>
+      <h2 style="margin:6px 0">Connected!</h2>
+      <div class="sub">Your bot is live. Send <b>.menu</b> in any chat to see what it can do.</div>
+    </div>
+  
+ <div class="card keybox" id="keybox" style="display:none"><h3 class="step">Your edit key</h3><p class="hint">Save this key now. It is shown only once. With your number and this key you can change your bot later on this page.</p><div class="code" id="keyv" style="font-size:24px">----</div><button class="ghost" id="keycp" type="button">Copy key</button></div>
+ <div class="card" style="margin-top:22px"><h3 class="step">Edit my bot</h3><p class="hint">Already created a bot here? Load it with your number and edit key, change anything and save.</p>
+  <label class="fld" for="ed-num">WhatsApp number<input id="ed-num" type="tel" inputmode="numeric" placeholder="919876543210" autocomplete="off"></label>
+  <label class="fld" for="ed-key">Edit key<input id="ed-key" type="text" placeholder="Your edit key" autocomplete="off"></label>
+  <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="adb" id="ed-load" type="button">Load my bot</button><button class="adb p" id="ed-save" type="button" disabled>Save changes</button></div><div class="msg" id="ed-msg"></div></div>
+</div></div>
+  </main>
+  <footer class="foot">
+    <div class="fgrid">
+      <div class="fc fbrand"><a class="brand" href="/" data-nav><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#crown"/></svg>RAUF × LUCIFER MD BOT</a><p>A free WhatsApp bot with <span data-cmdn>610+</span> commands, AI help and group tools. Link it to your number in under a minute.</p></div>
+      <div class="fc"><h4>Explore</h4><div class="fl"><a href="/" data-nav>Home</a><a href="/pair" data-nav>Link WhatsApp</a><a href="/create" data-nav>Create Bot</a><a href="/preview" data-nav>Preview</a><a href="/ai" data-nav>AI Support</a><a href="/commands" data-nav>Commands</a><a href="/learn" data-nav>Learn</a><a href="/docs" data-nav>Docs</a><a href="/support" data-nav>Support</a></div></div>
+      <div class="fc"><h4>Support</h4><div class="fsup" id="fsup"></div></div>
+    </div>
+    <div class="fcopy">Crafted by <b>RAUF × LUCIFER</b> &middot; Team RAUF × LUCIFER</div>
+  </footer>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#f0a21c"/></linearGradient>
+<symbol id="crown" viewBox="0 0 64 64"><path d="M6 46 L4 18 L19 30 L32 10 L45 30 L60 18 L58 46 Z" fill="url(#g)"/><rect x="6" y="48" width="52" height="8" rx="3" fill="url(#g)"/><circle cx="32" cy="10" r="4" fill="#d28bff"/><circle cx="4" cy="18" r="3.5" fill="#9b3dff"/><circle cx="60" cy="18" r="3.5" fill="#9b3dff"/><circle cx="32" cy="38" r="4" fill="#9b3dff"/></symbol>
+</defs></svg>
+<script src="/site-config.js"></script>
+<script src="/assets/enhance.js"></script><script src="/assets/enhance2.js"></script><script src="/assets/enhance3.js"></script>
+<script src="/assets/pair.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/legal.js" defer></script><script src="/assets/ios.js" defer></script><script src="/assets/callme.js" defer></script>
+</body>
+</html>

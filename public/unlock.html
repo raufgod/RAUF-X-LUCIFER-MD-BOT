@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RAUF × LUCIFER MD BOT - Enter password</title><meta name="description" content="RAUF × LUCIFER MD BOT is a free multi-device WhatsApp bot with 600+ commands. This website is protected: enter the one-time password from the Telegram bot to continue."><meta name="robots" content="noindex">
+<style>
+:root{--bg:#04120e;--card:#0b1f19;--ink:#eafff6;--mut:#8fb3a5;--gold:#f6b93b;--ok:#2ecc71;--bad:#ff5d5d}
+@media (prefers-color-scheme:light){:root{--bg:#f3faf7;--card:#fff;--ink:#0b2a20;--mut:#4d6d60}}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{background:radial-gradient(900px 500px at 50% -10%,#0f3b2d 0,var(--bg) 60%);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;display:grid;place-items:center;padding:20px}
+.c{width:100%;max-width:380px;background:var(--card);border:1px solid #f6b93b33;border-radius:20px;padding:28px 22px;text-align:center;box-shadow:0 20px 60px #0006}
+.k{font-size:42px}h1{margin:6px 0 4px;font-size:22px;letter-spacing:.3px}p{margin:0 0 18px;color:var(--mut);font-size:14px}
+input{width:100%;padding:14px;border-radius:12px;border:1px solid #f6b93b55;background:#0000001a;color:var(--ink);font-size:20px;text-align:center;letter-spacing:4px;text-transform:uppercase;outline:none}
+input:focus{border-color:var(--gold)}
+button{width:100%;margin-top:12px;padding:14px;border:0;border-radius:12px;background:var(--ok);color:#04120e;font-weight:700;font-size:16px;cursor:pointer}
+button:disabled{opacity:.6}
+.msg{min-height:20px;margin-top:10px;font-size:13px;color:var(--bad)}
+.get{display:block;margin-top:16px;padding:12px;border-radius:12px;background:#229ED9;color:#fff;text-decoration:none;font-weight:600;font-size:15px}
+.get[hidden]{display:none}.hint{font-size:12px;color:var(--mut);margin-top:8px}
+</style></head><body>
+<main class="c">
+  <div class="k">🔒</div>
+  <h1>Website locked</h1>
+  <p>Enter your password to continue.</p>
+  <input id="pw" placeholder="XXXX-XXXX" maxlength="9" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Password">
+  <button id="go" type="button">Unlock</button>
+  <div class="msg" id="msg" role="alert"></div>
+  <a class="get" id="get" href="#" target="_blank" rel="noopener" hidden>Get your password here</a>
+  <div class="hint" id="hint"></div>
+</main>
+<script>
+(function(){
+  var pw=document.getElementById('pw'),go=document.getElementById('go'),msg=document.getElementById('msg'),get=document.getElementById('get'),hint=document.getElementById('hint');
+  fetch('/api/unlock-info',{cache:'no-store'}).then(function(r){return r.json()}).then(function(i){
+    if(i&&i.botUrl){get.href=i.botUrl;get.hidden=false;hint.textContent='The password is valid for '+(i.minutes||10)+' minutes and works once.';}
+    else{hint.textContent='Ask the owner for a password.';}
+  }).catch(function(){});
+  pw.addEventListener('input',function(){var v=pw.value.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,8);pw.value=v.length>4?v.slice(0,4)+'-'+v.slice(4):v;});
+  pw.addEventListener('keydown',function(e){if(e.key==='Enter')submit();});
+  go.addEventListener('click',submit);
+  function submit(){
+    msg.textContent='';go.disabled=true;
+    fetch('/api/unlock',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:pw.value})})
+      .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j}})})
+      .then(function(x){if(x.ok&&x.j.ok){location.replace('/');}else{msg.textContent=(x.j&&x.j.error)||'Could not unlock.';go.disabled=false;}})
+      .catch(function(){msg.textContent='Network error. Try again.';go.disabled=false;});
+  }
+})();
+</script></body></html>

@@ -1,0 +1,67 @@
+/* RAUF × LUCIFER MD BOT - enhance3.css (Style Studio + effects; site.css untouched) */
+.e3-fx{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:min(1,calc(var(--fx,1)*1))}
+html.e-off .e3-fx{opacity:.5}
+.e3-cur{position:fixed;left:0;top:0;width:320px;height:320px;border-radius:50%;pointer-events:none;z-index:1;opacity:0;transition:opacity .3s;background:radial-gradient(circle,color-mix(in srgb,var(--cyan) 22%,transparent),transparent 65%);mix-blend-mode:screen;will-change:transform}
+.e3-cur.on{opacity:min(1,var(--fx,1))}
+html[data-e3t=mint] .e3-cur,html[data-e3t=candy] .e3-cur,html[data-theme=pro] .e3-cur,html[data-theme=frost] .e3-cur{mix-blend-mode:multiply;opacity:.0}
+.e3-sp{position:fixed;z-index:160;pointer-events:none;will-change:transform,opacity}
+[data-e3m]{transition:transform .15s ease-out}
+/* page fade */
+@keyframes e3in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+#app.e3-swap>*{animation:e3in .45s cubic-bezier(.2,.7,.3,1) both}
+html.e-off #app.e3-swap>*{animation:none}
+/* look options */
+html[data-e3f=sys] :where(body,h1,h2,h3,h4,p,a,li,span,b,em,button,input,textarea,select,summary,label,small):not(code):not(pre):not(kbd){font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif!important}
+html[data-e3f=mono] :where(body,h1,h2,h3,h4,p,a,li,span,b,em,button,input,textarea,select,summary,label,small){font-family:ui-monospace,'JetBrains Mono',Consolas,monospace!important}
+html[data-e3d=compact] #app{zoom:calc(var(--e2z,1)*.93)}
+html[data-e3c=hi]{--mute:var(--text);--line:color-mix(in srgb,var(--text) 55%,transparent)}
+html[data-e3c=hi] :focus-visible{outline:3px solid var(--gold)!important;outline-offset:2px}
+html[data-e3s=solid] *{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+/* announcement */
+.e3-ann{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;padding:8px 44px 8px 14px;position:relative;text-align:center;font-size:13.5px;color:#001;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--cyan));background-size:200% 100%;animation:e3sh 8s linear infinite}
+.e3-ann a{color:#001;font-weight:700;text-decoration:underline}
+.e3-ann button{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:none;color:#001;font-size:22px;line-height:1;cursor:pointer;padding:4px 8px}
+@keyframes e3sh{to{background-position:200% 0}}
+html.e-off .e3-ann{animation:none}
+/* Style Studio */
+.e2-sec .e3-open{width:100%;margin:0 0 12px;padding:11px 12px;border-radius:12px;border:1px solid var(--line);background:linear-gradient(120deg,color-mix(in srgb,var(--blue) 30%,var(--panel2)),var(--panel2));color:var(--text);font:inherit;font-weight:700;font-size:14px;text-align:left;cursor:pointer}
+.e3-open small{display:block;font-weight:400;color:var(--mute);font-size:12px;margin-top:2px}
+.e3-st{position:fixed;inset:0;z-index:135;display:flex;align-items:center;justify-content:center;padding:14px;background:#020712c0;backdrop-filter:blur(5px)}
+.e3-st[hidden]{display:none}
+.e3-card{width:min(520px,100%);max-height:90vh;overflow:auto;overscroll-behavior:contain;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:20px;padding:16px 18px 20px}
+.e3-hh{display:flex;justify-content:space-between;align-items:center;font-size:18px;margin-bottom:4px;position:sticky;top:-16px;background:var(--panel);padding:6px 0;z-index:1}
+.e3-hh button{border:0;background:none;color:var(--mute);font-size:28px;line-height:1;cursor:pointer;padding:0 6px}
+.e3-h{margin:16px 0 8px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.e3-h small{text-transform:none;letter-spacing:0;margin-left:6px;font-size:11.5px;opacity:.8}
+.e3-lab{font-size:13px;color:var(--mute);margin:8px 0 5px}
+.e3-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
+.e3-th{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font:inherit;font-size:13px;cursor:pointer;text-align:left}
+.e3-th i{width:20px;height:20px;border-radius:50%;flex:none}
+.e3-th.on,.e3-seg button.on{border-color:var(--cyan);box-shadow:0 0 0 2px color-mix(in srgb,var(--cyan) 35%,transparent)}
+.e3-acs{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.e3-ac{width:32px;height:32px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;color:var(--text)}
+.e3-ac.on{border-color:var(--text)}
+.e3-x{background:var(--panel2);border-color:var(--line);font-size:16px}
+#e3col{width:38px;height:32px;border:0;padding:0;background:none;cursor:pointer}
+.e3-seg{display:flex;flex-wrap:wrap;gap:6px}
+.e3-seg button{flex:1 1 auto;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font:inherit;font-size:13px;cursor:pointer}
+.e3-tgs{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;margin-top:8px}
+.e3-tg{display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer;padding:4px 0}
+.e3-tg input{width:18px;height:18px;accent-color:var(--blue);flex:none}
+.e3-n{font-size:12.5px;color:var(--mute);margin:14px 0 10px}
+.e3-rs{width:100%;padding:10px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font:inherit;font-weight:600;cursor:pointer}
+.e3-st button:focus-visible,.e3-st input:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+@media (max-width:420px){.e3-tgs{grid-template-columns:1fr}.e3-grid{grid-template-columns:1fr 1fr}}
+@media print{.e3-fx,.e3-cur,.e3-st,.e3-ann{display:none!important}}
+/* light extra themes (Mint, Candy): same readability fixes the built-in light themes use */
+:is(html[data-e3t=mint],html[data-e3t=candy]) :is(label,.lbl,.chips b,.qk button,.codebox ol,.stats b,.code,.stp span.on,.ci .n,.feat b,.e3-tg span,.e3-lab){color:var(--text)}
+:is(html[data-e3t=mint],html[data-e3t=candy]) .hero h1 span{background:none;-webkit-text-fill-color:var(--text);color:var(--text);animation:none}
+:is(html[data-e3t=mint],html[data-e3t=candy]) .crown{filter:none}
+:is(html[data-e3t=mint],html[data-e3t=candy]) :is(.orb,.spot,#bg,#gl,.rg,.tick){display:none!important}
+:is(html[data-e3t=mint],html[data-e3t=candy]) .m.a{background:var(--ink3);border-color:var(--line);color:var(--text)}
+:is(html[data-e3t=mint],html[data-e3t=candy]) :is(.chat,.cmenu,.term){background:#fff}
+:is(html[data-e3t=mint],html[data-e3t=candy]) nav{background:#ffffffcc}
+:is(html[data-e3t=mint],html[data-e3t=candy]) :is(.cta,.main){background:var(--blue);color:#fff}
+:is(html[data-e3t=mint],html[data-e3t=candy]) body{background:linear-gradient(180deg,var(--bg),var(--ink3))!important}
+:is(html[data-e3t=mint],html[data-e3t=candy])::before,:is(html[data-e3t=mint],html[data-e3t=candy])::after{display:none}
+.e3-tg span,.e3-lab{color:var(--text)}

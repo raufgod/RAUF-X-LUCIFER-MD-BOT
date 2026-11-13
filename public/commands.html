@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-theme="black">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Commands - RAUF × LUCIFER MD BOT</title>
+<meta name="description" content="Search the featured RAUF × LUCIFER MD BOT commands, filter by category and tap a command to copy it. Send .menu to the bot for the full live list."><meta name="robots" content="index,follow,max-image-preview:large"><meta name="application-name" content="RAUF × LUCIFER MD BOT"><meta name="author" content="RAUF × LUCIFER"><meta name="keywords" content="WhatsApp bot, multi device WhatsApp bot, WhatsApp pairing code, Baileys, Node.js, WhatsApp commands, AI chatbot, sticker bot, music downloader bot, group management bot, free WhatsApp bot"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website"><meta property="og:site_name" content="RAUF × LUCIFER MD BOT"><meta property="og:title" content="Commands - RAUF × LUCIFER MD BOT"><meta property="og:description" content="Search the featured RAUF × LUCIFER MD BOT commands, filter by category and tap a command to copy it. Send .menu to the bot for the full live list.">
+<meta name="theme-color" content="#04120e">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M6 46 4 18l15 12 13-20 13 20 15-12-2 28z' fill='%23f6b93b'/%3E%3Crect x='6' y='48' width='52' height='8' rx='3' fill='%23f6b93b'/%3E%3Ccircle cx='32' cy='10' r='4' fill='%2319d3ff'/%3E%3Ccircle cx='4' cy='18' r='3.5' fill='%232f7bff'/%3E%3Ccircle cx='60' cy='18' r='3.5' fill='%232f7bff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&amp;family=DM+Sans:wght@400;700&amp;display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&amp;family=DM+Sans:wght@400;700&amp;display=swap"></noscript>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/enhance.css"><link rel="stylesheet" href="/assets/enhance2.css"><link rel="stylesheet" href="/assets/enhance3.css"><link rel="stylesheet" href="/assets/legal.css"><link rel="stylesheet" href="/assets/ios.css">
+</head>
+<body data-page="commands">
+<div class="prog" id="prog"></div><div class="toast" id="toast" role="status"></div>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="dr" aria-label="Menu">
+  <div class="dh"><a class="brand" href="/" data-nav><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#crown"/></svg>RAUF × LUCIFER MD BOT</a><button type="button" id="dx" aria-label="Close menu">&times;</button></div>
+  <a href="/" data-nav>Home</a><a href="/pair" data-nav>Link WhatsApp</a><a href="/create" data-nav>Create Bot</a><a href="/preview" data-nav>Preview</a><a href="/ai" data-nav>AI Support</a><a href="/commands" data-nav>Commands</a><a href="/learn" data-nav>Learn</a><a href="/docs" data-nav>Docs</a><a href="/support" data-nav>Support</a>
+  <div class="dt">Support</div><div class="fsup" id="dsup" style="padding:0 4px"></div>
+</aside>
+<div class="wrap">
+  <nav>
+    <div class="nl"><button class="snd mb" id="mb" type="button" aria-label="Open menu">&#9776;</button><a class="brand" href="/" data-nav style="text-decoration:none;color:inherit"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#crown"/></svg>RAUF × LUCIFER MD BOT</a></div>
+    <div class="links"><a href="/" data-nav>Home</a><a href="/pair" data-nav>Link WhatsApp</a><a href="/create" data-nav>Create Bot</a><a href="/preview" data-nav>Preview</a><a href="/ai" data-nav>AI Support</a><a href="/commands" data-nav>Commands</a><a href="/learn" data-nav>Learn</a><a href="/docs" data-nav>Docs</a><a href="/support" data-nav>Support</a></div>
+    <a class="pill" href="/pair" data-nav>Link device</a>
+  </nav>
+  <main id="app">
+<div class="pg cmpg"><h1>All commands</h1><p class="pgl">Search the full list, filter by category and tap any command to copy it. Every command starts with a dot.</p>
+<div class="cm-bar"><label class="cm-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="cmq" type="search" placeholder="Search, e.g. play, kick, sticker" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search commands"></label><span class="cm-count" id="cmn" aria-live="polite"></span></div>
+<div class="cm-cats collapsed" id="cmc" role="group" aria-label="Categories"></div>
+<button type="button" class="cm-more" id="cmm" hidden>All categories</button>
+<div class="cm-list" id="cml"><p class="cm-empty">Loading commands&hellip;</p></div>
+<noscript><p class="cm-empty">Turn on JavaScript to search the list, or read it on the <a href="/docs">Docs page</a>.</p></noscript>
+<p class="cm-note">Some commands need extra words, for example <code>.weather Delhi</code>. Group commands only work when the bot is a group admin.</p></div>
+  </main>
+  <footer class="foot">
+    <div class="fgrid">
+      <div class="fc fbrand"><a class="brand" href="/" data-nav><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#crown"/></svg>RAUF × LUCIFER MD BOT</a><p>A free WhatsApp bot with <span data-cmdn>610+</span> commands, AI help and group tools. Link it to your number in under a minute.</p></div>
+      <div class="fc"><h4>Explore</h4><div class="fl"><a href="/" data-nav>Home</a><a href="/pair" data-nav>Link WhatsApp</a><a href="/create" data-nav>Create Bot</a><a href="/preview" data-nav>Preview</a><a href="/ai" data-nav>AI Support</a><a href="/commands" data-nav>Commands</a><a href="/learn" data-nav>Learn</a><a href="/docs" data-nav>Docs</a><a href="/support" data-nav>Support</a></div></div>
+      <div class="fc"><h4>Support</h4><div class="fsup" id="fsup"></div></div>
+    </div>
+    <div class="fcopy">Crafted by <b>RAUF × LUCIFER</b> &middot; Team RAUF × LUCIFER</div>
+  </footer>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#f0a21c"/></linearGradient>
+<symbol id="crown" viewBox="0 0 64 64"><path d="M6 46 L4 18 L19 30 L32 10 L45 30 L60 18 L58 46 Z" fill="url(#g)"/><rect x="6" y="48" width="52" height="8" rx="3" fill="url(#g)"/><circle cx="32" cy="10" r="4" fill="#d28bff"/><circle cx="4" cy="18" r="3.5" fill="#9b3dff"/><circle cx="60" cy="18" r="3.5" fill="#9b3dff"/><circle cx="32" cy="38" r="4" fill="#9b3dff"/></symbol>
+</defs></svg>
+<script src="/site-config.js"></script>
+<script src="/assets/enhance.js"></script><script src="/assets/enhance2.js"></script><script src="/assets/enhance3.js"></script>
+<script src="/assets/pair.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/legal.js" defer></script><script src="/assets/ios.js" defer></script><script src="/assets/callme.js" defer></script>
+</body>
+</html>

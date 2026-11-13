@@ -1,0 +1,1 @@
+module.exports = { pattern: "trt", desc: "Translate text", category: "utility", use: ".trt2", execute: async (conn, message, m, { reply }) => reply("Use .translate2 <text> <language> or reply to text with .trt2 <language>.") };
