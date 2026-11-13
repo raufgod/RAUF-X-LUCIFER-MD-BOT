@@ -5,6 +5,10 @@
 <!--              OFFICIAL PROJECT BANNER            -->
 <!-- ═══════════════════════════════════════════════ -->
 
+<img src="./rauf-lucifer-banner.png" width="100%" alt="RAUF X LUCIFER MD BOT"/>
+
+<br/>
+
 <img src="./readme-banner.svg" width="100%" alt="RAUF × LUCIFER MD BOT"/>
 
 <br/>
