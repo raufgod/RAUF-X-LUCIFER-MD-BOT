@@ -1,9 +1,15 @@
+
 <div align="center">
-  <img src="./banner.png"
-       width="100%"
-       alt="RAUF X LUCIFER Banner">
+
+  <img
+    src="./rauf-lucifer-banner.png"
+    alt="RAUF X LUCIFER MD BOT Banner"
+    width="100%"
+    style="max-width: 900px; height: auto; border-radius: 15px;"
+  />
+
 </div>
-<div align="center">
+
 
 # 亗 𝐑𝐀𝐔𝐅 × 𝐋𝐔𝐂𝐈𝐅𝐄𝐑 亗
 
