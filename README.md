@@ -1,312 +1,450 @@
+
 <div align="center">
 
-# 亗 RAUF × LUCIFER MD BOT 亗
+# 亗 𝐑𝐀𝐔𝐅 × 𝐋𝐔𝐂𝐈𝐅𝐄𝐑 亗
 
-### The Multi-Device WhatsApp Automation Suite
+### 𝐌𝐃 𝐁𝐎𝐓 — 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋 𝐑𝐄𝐏𝐎𝐒𝐈𝐓𝐎𝐑𝐘
 
-**600+ commands · Pairing-code connection · Web control centre · Telegram companion**
+**POWERFUL • MULTI DEVICE • FAST • ADVANCED**
 
 <p>
-  <a href="https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub repository"></a>
-  <img src="https://img.shields.io/badge/Release-25.2.0--beta-7C3AED?style=for-the-badge" alt="Version 25.2 beta">
-  <img src="https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js 18+">
-  <img src="https://img.shields.io/badge/WhatsApp-Multi--Device-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Multi-Device">
-  <img src="https://img.shields.io/badge/License-ISC-64748B?style=for-the-badge" alt="ISC License">
+  <img src="https://img.shields.io/badge/RAUF%20×%20LUCIFER-8000FF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/WHATSAPP-MULTI%20DEVICE-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
+  <img src="https://img.shields.io/badge/DEVELOPER-RAUF-111111?style=for-the-badge">
 </p>
 
-**Created and maintained by RAUF × LUCIFER**
+<p>
+  <img src="https://img.shields.io/badge/STATUS-UNDER%20DEVELOPMENT-orange?style=flat-square">
+  <img src="https://img.shields.io/badge/MAINTAINED-YES-success?style=flat-square">
+  <img src="https://img.shields.io/badge/LICENSE-SEE%20REPOSITORY-blue?style=flat-square">
+</p>
 
-[Features](#-features) · [Installation](#-installation) · [Configuration](#-configuration) · [Pairing](#-connect-whatsapp) · [Commands](#-commands) · [Security](#-security)
+**Main Owner & Developer: RAUF**
+
+**Official Team: RAUF × LUCIFER**
 
 </div>
 
 ---
 
-## ◈ Overview
+## 👑 ABOUT THE PROJECT
 
-**RAUF × LUCIFER MD BOT** is a Node.js-based WhatsApp Multi-Device automation project built around the Baileys ecosystem. It brings together a large command collection, a browser-based control website, device pairing, optional Telegram integrations and administration utilities in one self-hosted application.
+**RAUF × LUCIFER MD BOT** is a WhatsApp Multi-Device automation project developed and maintained by RAUF.
 
-The project is designed for people who want to run and customise their own WhatsApp bot while managing its connected device and website from a single server.
+The project aims to provide a powerful, customizable and user-friendly WhatsApp bot experience with automation features, session management, administrative controls, API integrations and web-based management capabilities.
 
-> **Project status:** `25.2.0-beta`  
-> This is a beta release. Features, dependencies and setup details may change between versions.
+Our goal is to create a modern bot ecosystem with a premium experience and flexible configuration.
 
-## ✦ Features
+### 🎯 PROJECT VISION
 
-| Module | Highlights |
+- Powerful WhatsApp automation.
+- Modern Multi-Device architecture.
+- Easy session linking and management.
+- Advanced administration system.
+- Customizable bot identity.
+- Integrated web management experience.
+- Reliable and maintainable project structure.
+
+---
+
+## ⚡ KEY FEATURES
+
+| Feature | Description |
 |---|---|
-| **WhatsApp Bot** | Multi-Device connection, message handling and command-based interaction |
-| **Command Library** | 600+ commands covering utilities, media, stickers, AI features, games and group tools |
-| **Pairing System** | Link a WhatsApp device using an 8-character pairing code |
-| **Web Control Website** | Responsive website with device-linking flow, command browser and support interface |
-| **White-Label Options** | Custom bot identity, owner details, prefix and branding options |
-| **Telegram Companion** | Optional Telegram integrations for supported session and password workflows |
-| **Admin Panel** | Health information, backups, branding and supported ZIP upgrade tools |
-| **Voice Agent** | Optional voice-agent functionality, subject to its configuration |
-| **Deployment Options** | Run on a VPS or another Node.js hosting environment |
+| WhatsApp MD | Multi-Device bot architecture |
+| Pairing System | Number-based pairing workflow |
+| Multi-Session | Multiple session support where enabled |
+| Admin Controls | Administrative management |
+| Owner Controls | Owner-level permissions |
+| Telegram | Telegram integration |
+| Force Join | Membership verification system |
+| Web Panel | Browser-based management |
+| API Support | External API integrations |
+| Custom Branding | Custom bot name and logo |
+| Support System | Support and assistance interface |
+| Privacy | Privacy and cookie information |
 
-### Command categories
+*Feature availability depends on the deployed version and configuration.*
 
-The command collection includes tools from areas such as:
+---
 
-- Group and community administration
-- Media and utility commands
-- Stickers and image-related tools
-- AI and assistant features
-- Games and entertainment
-- Information and lookup utilities
+## 📱 WHATSAPP BOT SYSTEM
 
-Available commands can depend on configuration, API availability and the current release. Use `.menu` in WhatsApp to view the commands enabled in your running instance.
+The WhatsApp bot is designed around a Multi-Device architecture.
 
-## ◈ Architecture
+### Main Capabilities
 
-```text
-WhatsApp device
-      │
-      │ Baileys / Multi-Device connection
-      ▼
-RAUF × LUCIFER MD BOT
-      │
-      ├── Command handler
-      ├── Feature modules
-      ├── Optional Telegram integrations
-      ├── Web server and pairing interface
-      └── Admin and management utilities
-                 │
-                 ▼
-          Self-hosted server
-```
+- WhatsApp account linking.
+- Pairing-code-based connection.
+- Session management.
+- Command processing.
+- Bot customization.
+- Administrative functionality.
+- Group and user management features where implemented.
+- Automated responses and integrations.
 
-The application starts through `index.js` and uses the scripts defined in `package.json`.
+### 🔗 ACCOUNT LINKING
 
-## ⚙️ Requirements
+The web pairing workflow is designed to help users connect their WhatsApp accounts through the available pairing interface.
 
-Before installation, make sure your hosting environment has:
+The linking process may include:
 
-- **Node.js 18 or newer** (Node.js 22 is recommended)
-- npm
+1. Opening the pairing page.
+2. Selecting the available server.
+3. Entering the WhatsApp number.
+4. Requesting a pairing code.
+5. Completing the linking process in WhatsApp.
+
+Never share your WhatsApp session credentials with anyone.
+
+---
+
+## 🌐 WEB CONTROL PANEL
+
+The project includes a web-management concept for controlling and configuring supported bot services.
+
+### Web Panel Features
+
+- WhatsApp linking interface.
+- Server selection.
+- Country and phone-number selection.
+- Custom bot name.
+- Custom bot logo.
+- Support interface.
+- AI support agent.
+- Administrative management.
+- Session-related operations.
+
+### Available Documentation Pages
+
+- Privacy Policy
+- Cookie Policy
+- Account Linking Information
+- Support Information
+
+---
+
+## 🤖 TELEGRAM INTEGRATION
+
+Telegram integration is included in the project's supported ecosystem.
+
+Potential management capabilities include:
+
+- Telegram command handling.
+- Administrative notifications.
+- Membership verification.
+- Support-related interactions.
+- Bot management workflows.
+
+Telegram features depend on the configured bot and enabled modules.
+
+---
+
+## 👨‍💻 ADMINISTRATION SYSTEM
+
+The administration system is intended to provide controlled access to management features.
+
+### Administration Categories
+
+- Owner permissions.
+- Admin permissions.
+- User management.
+- Group management.
+- Session management.
+- Bot configuration.
+- Membership verification.
+- Administrative notifications.
+
+Only authorized users should receive administrative permissions.
+
+---
+
+## 🔌 API INTEGRATIONS
+
+The project supports integrations with external API services.
+
+API integrations can provide additional functionality without requiring every feature to be implemented locally.
+
+### Integration Information
+
+- External API endpoints.
+- Configurable API settings.
+- Request and response handling.
+- Error handling.
+- Service availability checks.
+
+Public API endpoints and their original attribution should remain documented.
+
+Never publish private API keys, tokens or authentication credentials.
+
+---
+
+## 🛠️ TECHNOLOGY & REQUIREMENTS
+
+The exact runtime and dependencies are defined by the project source.
+
+General deployment requirements:
+
 - Git
-- A stable internet connection
-- `ffmpeg` available in `PATH` for supported media features
-- A VPS or hosting environment capable of keeping a Node.js process running
-- A public HTTPS URL if you want to access the website from outside your server
+- Internet connection
+- Compatible runtime
+- Required project dependencies
+- Configured environment variables
+- Hosting environment
 
-A domain, Cloudflare Tunnel or ngrok can be used to expose the website. Tunnel setup is optional if you only need local access.
+For Node.js deployments, use the Node.js version supported by the project's dependencies.
 
-## 🚀 Installation
+---
 
-### 1. Clone the repository
+## 📥 INSTALLATION GUIDE
+
+### STEP 1 — Clone Repository
 
 ```bash
 git clone https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT.git
+```
+
+### STEP 2 — Open Project
+
+```bash
 cd RAUF-X-LUCIFER-MD-BOT
 ```
 
-### 2. Install dependencies
+### STEP 3 — Install Dependencies
+
+For a Node.js build:
 
 ```bash
-npm install --legacy-peer-deps --no-audit --no-fund
+npm install
 ```
 
-If your hosting panel requires the included install script, you can use:
+### STEP 4 — Configure Environment
 
-```bash
-npm run install:panel
-```
+Configure the required environment variables using the project's existing configuration.
 
-### 3. Create your environment file
+Do not upload private credentials to GitHub.
 
-```bash
-cp .env.example .env
-```
+### STEP 5 — Start Application
 
-Open `.env` and configure only the values you actually use. Keep this file private; it must never be committed to a public repository.
-
-### 4. Configure your public URL (optional)
-
-If you use ngrok and the project instructions require its configuration file:
-
-```bash
-cp ngrok.txt.example ngrok.txt
-```
-
-Add your own tunnel configuration locally. Do not publish authentication tokens or private tunnel details.
-
-### 5. Start the application
+For a build configured with an npm start script:
 
 ```bash
 npm start
 ```
 
-The default server port is `2159`, unless overridden by `PAIR_PORT`, `SERVER_PORT` or `PORT`.
+**Important:** Use the actual runtime and startup instructions supplied by the current project version. These Node.js commands are not applicable to a Python-only build.
 
-## 🔗 Connect WhatsApp
+---
 
-1. Start the application and open its website.
-2. Select the device-linking option.
-3. Enter your WhatsApp number with its country code.
-4. Request the pairing code.
-5. On your phone, open **WhatsApp → Settings → Linked devices → Link with phone number**.
-6. Enter the pairing code displayed by your running application.
-7. Once connected, send `.menu` from the linked account to view the available commands.
+## ⚙️ CONFIGURATION
 
-**Keep your WhatsApp session data private.** Anyone with access to a valid session may be able to control that linked bot account.
+Before deployment, review the project's configuration files.
 
-## 🖥️ Website & Admin Panel
+Typical configuration categories:
 
-The project includes a website served by the Node.js application. Depending on configuration and release, it provides:
-
-- Device-linking interface
-- Command browsing
-- Support interface
-- Branding and preview options
-- Optional website password protection
-
-The private admin route uses the `ADMIN_CODE` value configured in your environment. Treat this value like a password and never share it publicly.
-
-## 🧩 Configuration
-
-The full environment-variable reference is maintained in **`.env.example`**. Common settings include:
-
-| Variable | Purpose |
+| Configuration | Purpose |
 |---|---|
-| `PAIRING_NUMBER` | Number used for the optional startup owner-pairing flow |
-| `OWNER_NUMBER` | Primary owner number for owner-restricted commands |
-| `OWNER_NUMBER_2` | Optional additional owner number |
-| `ADMIN_CODE` | Secret path value for the admin panel |
-| `TELEGRAM_BOT_TOKEN` | Optional Telegram session-bot credential |
-| `TELEGRAM_PASSWORD_BOT_TOKEN` | Optional Telegram password-bot credential |
-| `TELEGRAM_ADMIN_IDS` | Telegram IDs authorised for supported admin actions |
-| `SITE_DOMAIN` | Public website domain |
-| `CLOUDFLARE_TUNNEL_TOKEN` | Optional Cloudflare Tunnel credential |
-| `NGROK_AUTHTOKEN` | Optional ngrok authentication token |
-| `NGROK_DOMAIN` | Optional ngrok domain |
-| `GROQ_API_KEY` | Optional voice-agent speech-to-text integration |
+| Bot Name | Custom bot identity |
+| Owner | Owner identification |
+| Admins | Authorized administrators |
+| Telegram | Telegram integration |
+| API | External service configuration |
+| Session | WhatsApp connection |
+| Force Join | Membership verification |
+| Server | Hosting configuration |
 
-Not every integration is required. Leave unused options unconfigured and follow the comments in `.env.example`.
+Keep private values outside public source control.
 
-## 🧪 Checks & Tests
+---
 
-Run the project checks before deploying changes:
+## 🚀 DEPLOYMENT
 
-```bash
-# Source checks
-npm run check
+The project can be deployed in a compatible hosting environment.
 
-# Project test command (checks + smoke test)
-npm test
+General deployment workflow:
 
-# Security tests
-npm run test:security
+1. Prepare the hosting environment.
+2. Upload or clone the repository.
+3. Install required dependencies.
+4. Configure environment variables.
+5. Verify required services.
+6. Start the application.
+7. Check logs and application health.
+8. Test the pairing and management interfaces.
 
-# Telegram integration tests
-npm run test:telegram
+For production deployments, use a secure HTTPS connection and protect administrative access.
 
-# TechX integration tests
-npm run test:techx
-```
+---
 
-Some integration tests may require the relevant service credentials or configuration. Do not put real credentials into test output, screenshots or public issue reports.
+## 🔐 SECURITY & PRIVACY
 
-## 🛠️ Useful npm scripts
+Security is an important part of the project.
 
-| Command | Description |
-|---|---|
-| `npm start` | Start the application |
-| `npm run start:optimized` | Start using the optimized start script |
-| `npm run start:panel` | Start the application for panel-based hosting |
-| `npm run check` | Run source checks |
-| `npm test` | Run checks and smoke test |
-| `npm run test:security` | Run security tests |
-| `npm run test:telegram` | Run Telegram integration tests |
-| `npm run test:techx` | Run TechX integration tests |
-| `npm run cleanup` | Run the cleanup script, if included in the deployment package |
-| `npm run reset-session` | Run the session-reset script, if included in the deployment package |
+### Security Recommendations
 
-Use session-reset commands carefully. Resetting session data may require you to link WhatsApp again.
+- Never expose Telegram bot tokens.
+- Never publish private API keys.
+- Protect WhatsApp session credentials.
+- Restrict owner and admin permissions.
+- Use HTTPS for web interfaces.
+- Validate user input.
+- Keep dependencies updated.
+- Avoid committing `.env` files.
+- Review access to administrative endpoints.
 
-## 📁 Project Structure
+### Privacy Documentation
+
+The project provides documentation for:
+
+- Privacy Policy
+- Cookie Policy
+- Account Linking
+- Service Information
+- Support Information
+
+Users should review the applicable policies before using the service.
+
+---
+
+## 📚 PROJECT STRUCTURE
+
+The actual directory structure may vary between releases.
+
+Important project components may include:
 
 ```text
 RAUF-X-LUCIFER-MD-BOT/
-├── assets/          Static assets
-├── commands/        Bot command modules
-├── data/            Application data and defaults
-├── docs/            Project documentation
-├── features/        Feature modules
-├── lib/             Core libraries and integrations
-├── public/          Website files and assets
-├── qadeer/          Additional bot modules
-├── scripts/         Checks and test utilities
-├── index.js         Main application entry point
-├── main.js          Message handling / bot logic
-├── config.js        Configuration
-├── settings.js      Bot settings
-├── package.json     Dependencies and npm scripts
-├── .env.example     Environment configuration template
-├── SECURITY.md      Security policy
-└── LICENSE          License information
+│
+├── assets/
+│
+├── public/
+│   ├── HTML pages
+│   ├── Stylesheets
+│   └── Frontend scripts
+│
+├── plugins/
+│
+├── config/
+│
+├── README.md
+├── package.json
+├── .gitignore
+└── .env
 ```
 
-## 🔐 Security
+This is an illustrative structure, not a guaranteed listing of every file in the repository.
 
-Security matters especially for bots that connect to personal messaging accounts.
+---
 
-- Never commit `.env`, `ngrok.txt`, access tokens, passwords or private API keys.
-- Never publish WhatsApp session folders or linked-device credentials.
-- Keep the admin route secret and use strong, unique credentials.
-- Restrict server and panel access to trusted users.
-- Rotate any credential that is accidentally exposed.
-- Review `SECURITY.md` before reporting a vulnerability.
-- Use public API endpoints responsibly and follow the provider's terms.
+## 🧩 COMMANDS & MODULES
 
-**Public API endpoint URLs are not the same as private API credentials.** Keep public endpoint references intact when documenting integrations, but never expose secret keys, bearer tokens or private access data.
+The bot's command list depends on the installed plugins and current release.
 
-## 🧯 Troubleshooting
+Command categories may include:
 
-| Problem | What to check |
-|---|---|
-| Website does not open | Confirm the process is running, check the configured port and verify your tunnel/domain |
-| Pairing code does not appear | Check the number format and the pairing flow shown by the website; startup pairing may be disabled if `PAIRING_NUMBER` is empty |
-| WhatsApp does not connect | Check internet access, phone connectivity and the server logs; try pairing again if the session is no longer valid |
-| Commands do not respond | Check the active prefix, bot mode, permissions and console output |
-| Media command fails | Check `ffmpeg`, network access and whether the relevant external service is available |
-| Optional integration fails | Verify that its environment variables are configured and that the provider is reachable |
+- General Commands
+- AI Commands
+- Group Management
+- Admin Commands
+- Owner Commands
+- Utility Commands
+- Information Commands
+- Automation Commands
 
-When asking for help, share the relevant error message with all tokens, phone numbers, session data and other private information removed.
+Refer to the actual bot menu and installed command modules for supported command names.
 
-## 🤝 Contributing
+---
 
-Contributions, bug reports and suggestions are welcome.
+## 🆘 TROUBLESHOOTING
 
-1. Fork the repository.
-2. Create a branch for your change.
-3. Make a focused change and run the relevant checks.
-4. Open a pull request with a clear description of what changed.
+### Dependency Installation Problems
 
-Please do not include personal credentials, WhatsApp sessions or private user data in commits or issue reports.
+Check the runtime version and dependency compatibility.
 
-## 📜 License
+### Pairing Problems
 
-This project is distributed under the **ISC License**. See the [`LICENSE`](LICENSE) file for the full license text.
+Verify the server connection and WhatsApp account linking workflow.
 
-## ⚖️ Disclaimer
+### Telegram Integration Problems
 
-This is an independent, community-developed project. It is **not affiliated with, endorsed by, sponsored by or officially supported by WhatsApp or Meta**.
+Verify Telegram configuration and bot permissions.
 
-Use this software responsibly and in accordance with applicable laws and the terms of the platforms and services you connect to. You are responsible for your own deployment, configuration and use.
+### Web Panel Problems
 
-## 👑 Credits
+Check server logs, environment configuration and HTTPS settings.
+
+### API Problems
+
+Verify the endpoint, request format and service availability.
+
+---
+
+## 🤝 CONTRIBUTION
+
+Contributions and suggestions are welcome.
+
+Before submitting changes:
+
+1. Review the existing project structure.
+2. Avoid removing existing functionality.
+3. Keep private credentials out of commits.
+4. Test your changes.
+5. Provide a clear description of your contribution.
+
+---
+
+## ⚖️ DISCLAIMER
+
+This project is provided for educational, development and authorized automation purposes.
+
+- Use the project responsibly.
+- Follow applicable WhatsApp and Telegram policies.
+- Do not use the project for spam or unauthorized activities.
+- Protect your personal account and credentials.
+- The developer is not responsible for misuse of the software.
+
+---
+
+## 👑 DEVELOPER & CREDITS
 
 <div align="center">
 
 ### 亗 RAUF × LUCIFER 亗
 
-**Developed by RAUF**  
-**Team RAUF × LUCIFER**
+**MAIN OWNER & DEVELOPER**
 
-[![GitHub](https://img.shields.io/badge/Explore%20Repository-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT)
+# RAUF
 
-*Built with dedication. Customised for the community.*
+**TEAM RAUF × LUCIFER**
+
+Built with dedication, creativity and technology.
+
+</div>
+
+---
+
+## 🌟 SUPPORT THE PROJECT
+
+If you find this project useful:
+
+- Star the repository.
+- Share the project.
+- Report reproducible bugs.
+- Suggest improvements.
+- Contribute responsibly.
+
+**GitHub Repository:**
+
+https://github.com/Rauf-ctrl/RAUF-X-LUCIFER-MD-BOT
+
+---
+
+<div align="center">
+
+# 亗 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐑𝐀𝐔𝐅 × 𝐋𝐔𝐂𝐈𝐅𝐄𝐑 亗
+
+**DEVELOPED BY RAUF**
+
+**© 2026 RAUF × LUCIFER**
 
 </div>
